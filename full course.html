@@ -1,14 +1,41 @@
-<xml:lang=pt-br
 <html>
 <head>
-<title>Crie sua experiência</title>
+<title>La Petit Cuisine Française</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
 </head>
 <body>
 
-<h1>Crie sua experiência</h1>
-<p>Selecione os pratos de seu full course<br/>Não tem certeza do que pedir? Nossa equipe está sempre a disposição para oferecer recomendações baseadas em seus gostos.</p>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">La Petit Cuisine Française</a>
+    </div>
+  </div>
+</div>
 
-<form>
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">La Petit Cuisine Française</h1>
+  </div>
+</header>
+
+<div class="w3-content" style="max-width:1100px">
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+    
+  <hr>
+
+ <form>
   <h2>Selecione sua entrée</h2>
   <form action="/action_page.php">
     <input type="checkbox" class="rounded-checkbox" id="entrée1" name="entrée1" value="entrée">
@@ -49,24 +76,27 @@
     <label for="sobremesa2"> sobremesa</label><br>
     <input type="checkbox" class="rounded-checkbox" id="sobremesa3" name="sobremesa3" value="sobremesa">
     <label for="sobremesa3"> sobremesa</label><br><br>
-    <input type="submit" class="enviar" value="enviar" onclick="return confirm('Tem certeza que deseja enviar esse pedido para o(a) chef?')"/>
+    <input class="w3-button w3-light-grey w3-section" type="submit" value="Enviar" onclick="return confirm('Tem certeza que deseja enviar esse pedido para o(a) chef?')"/>
     <style>
-      .rounded-checkbox {
-      width:15px;
-      height: 15px;
-      border-radius: 50%;
-      vertical-align: middle;
-      border: 1px solid black;
-      appearance: none;
-      -webkit-appearance: none;
-      outline: none;
-      cursor: pointer;
-    }
+     .rounded-checkbox {
+     width:15px;
+     height: 15px;
+     border-radius: 50%;
+     vertical-align: middle;
+     border: 1px solid black;
+     appearance: none;
+     -webkit-appearance: none;
+     outline: none;
+     cursor: pointer;
+     }
     .rounded-checkbox:checked {
       appearance: auto;
       clip-path: circle(50% at 50% 50%);
       background-color: blue;
-    }
-    
+     }
+    </form>
+  </div>
+</div>
+
 </body>
 </html>
