@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>La Petit Restaurante</title>
+</head>
+<body>
+    <header>
+        <img src="./img/IMG-20240924-WA0016.jpg" alt="Logo do restaurante">
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+
+                <li>
+                    <a href="">Entradas</a>
+                </li>
+
+                <li>
+                    <a href="">Pratos Principais</a>
+                </li>
+
+                <li>
+                    <a href="">Acompanhamentos</a>
+                </li>
+
+                <li>
+                    <a href="">Sobremesas</a>
+                </li>
+
+                <li>
+                    <a href="">Bebidas</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>La Petit Cuisine Française</h1>
+        <br>
+        <h2>Descubra o encanto da França no La Petit Cuisine Française! 🇫🇷 Delicie-se com pratos autênticos, preparações cuidadosas e um ambiente acolhedor que faz você se sentir em Paris. Venha saborear a verdadeira experiência culinária francesa! Reserve sua mesa hoje mesmo!</h2>
+        <br>
+        <section>
+            <div>
+                <h3>Sobre Nós</h3> 
+                <p>Em 1958, o La Petit Cuisine Française surgiu do sonho de um jovem chef francês que desejava compartilhar a rica gastronomia de sua terra natal. Localizado em uma charmosa rua de paralelepípedos, o restaurante logo se destacou pela autenticidade de suas receitas clássicas.</p>
+
+                <p>Nos anos 60, rapidamente se tornou um ponto de encontro para os amantes da culinária, atraindo tanto moradores quanto turistas com o aroma irresistível de coq au vin, bouillabaisse e tarte Tatin. A atmosfera acolhedora e o atendimento atencioso garantiam uma experiência memorável a cada visita.</p>
+            </div>
+            <div>
+                <p>
+                    No La Petit Cuisine Française, a qualidade da comida é uma verdadeira prioridade. Cada prato é preparado com ingredientes frescos e selecionados, refletindo o compromisso do restaurante com a autenticidade da culinária francesa. O chef utiliza técnicas tradicionais, garantindo que cada receita mantenha seu caráter original e sabor inigualável.
+                </p>
+            </div>
+        </section>
+        <br>
+        <section>
+            <h3>Faça sua Reserva</h3>
+            <form action="reservar.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+
+                <label for="pessoas">Número de Pessoas:</label>
+                <input type="number" id="pessoas" name="pessoas" min="1" max="20" required>
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        <p>Contato: (xx) xxxx-xxxx | Email: contato@lapetit.com</p>
+        <p>&copy; 2024 La Petit Restaurante. Todos os direitos reservados.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a href="https://twitter.com/" target="_blank">Twitter</a>
+        </div>
+        <div class="payment-methods"></div>
+            <h4>Aceitamos os seguintes cartões:</h4>
+            <img src="https://guiadacidadesc.com.br/wp-content/uploads/2019/02/logos-cart%C3%B5es-de-credito-guia-da-cidade-sc.png" alt="Visa" width="50">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/MasterCard_logo.svg" alt="MasterCard" width="50">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/American_Express_logo.svg" alt="American Express" width="50">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Discover_Card_logo.svg" alt="Discover" width="50">
+        </div>
+    </footer>
+</body>
+</html>
