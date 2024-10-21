@@ -57,9 +57,15 @@ h1, h2, h3, h4, h5, h6 {
   <div class="bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
      <button onclick="myFunction()" class="bar w3-button dropbtn">La Petit Cuisine Française</button>
   	<div id="myDropdown" class="dropdown-content">
-   		<a href="#home">Home</a>
-  		<a href="#about">About</a>
- 		<a href="#contact">Contact</a>
+   		<a href="">Home</a>
+  		<a href="">Aperitivos</a>
+ 		<a href="">Entradas</a>
+        <a href="">Pratos Principais</a>
+        <a href="">Bebidas Alcoólicas</a>
+        <a href="">Bebidas não Alcoólicas</a>
+        <a href="">Sobremesas</a>
+ 		<a href="">Selecione seu Course</a>
+ 		<a href="">Selecione sua Bebiba</a>
   </div>
 </div>
 
