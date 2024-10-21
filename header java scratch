@@ -60,10 +60,10 @@ h1, h2, h3, h4, h5, h6 {
    		<a href="">Home</a>
   		<a href="">Aperitivos</a>
  		<a href="">Entradas</a>
-        <a href="">Pratos Principais</a>
-        <a href="">Bebidas Alcoólicas</a>
-        <a href="">Bebidas não Alcoólicas</a>
-        <a href="">Sobremesas</a>
+        	<a href="">Pratos Principais</a>
+        	<a href="">Bebidas Alcoólicas</a>
+        	<a href="">Bebidas não Alcoólicas</a>
+        	<a href="">Sobremesas</a>
  		<a href="">Selecione seu Course</a>
  		<a href="">Selecione sua Bebiba</a>
   </div>
