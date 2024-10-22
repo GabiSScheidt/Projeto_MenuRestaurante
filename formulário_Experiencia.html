@@ -1,54 +1,144 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa de Satisfação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fff8e1; /* Cor de fundo ajustada */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Evitar rolagem horizontal */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-bottom: 40px; /* Espaço extra para o rodapé */
+        }
+
+        h1 {
+            text-align: center;
+            color: #04AA6D;
+            margin-top: 20px;
+        }
+
+        form {
+            background-color: white;
+            padding: 15px; /* Reduzido para economizar espaço */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px; /* Reduzido para economizar espaço */
+            margin-bottom: 15px; /* Reduzido para economizar espaço */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px; /* Reduzido para economizar espaço */
+        }
+
+        input[type="submit"] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 18px; /* Reduzido para economizar espaço */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px; /* Reduzido para economizar espaço */
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px; /* Altura do rodapé ainda mais reduzida */
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer a {
+            color: #04AA6D;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Pesquisa de Satisfação</h1>
-    <form action="/submit_survey" method="post">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+    <div class="container">
+        <h1>Pesquisa de Satisfação</h1>
+        <form action="/submit_survey" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="order_number">Número do Pedido:</label>
-        <input type="text" id="order_number" name="order_number" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="rating">Como você avalia sua experiência geral?</label>
-        <select id="rating" name="rating" required>
-            <option value="5">Excelente</option>
-            <option value="4">Muito Bom</option>
-            <option value="3">Bom</option>
-            <option value="2">Regular</option>
-            <option value="1">Ruim</option>
-        </select>
+            <label for="order_number">Número do Pedido:</label>
+            <input type="text" id="order_number" name="order_number" required>
 
-        <label for="food_quality">Qualidade da Comida:</label>
-        <select id="food_quality" name="food_quality" required>
-            <option value="5">Excelente</option>
-            <option value="4">Muito Boa</option>
-            <option value="3">Boa</option>
-            <option value="2">Regular</option>
-            <option value="1">Ruim</option>
-        </select>
+            <label for="rating">Como você avalia sua experiência geral?</label>
+            <select id="rating" name="rating" required>
+                <option value="5">Excelente</option>
+                <option value="4">Muito Bom</option>
+                <option value="3">Bom</option>
+                <option value="2">Regular</option>
+                <option value="1">Ruim</option>
+            </select>
 
-        <label for="service_quality">Qualidade do Serviço:</label>
-        <select id="service_quality" name="service_quality" required>
-            <option value="5">Excelente</option>
-            <option value="4">Muito Boa</option>
-            <option value="3">Boa</option>
-            <option value="2">Regular</option>
-            <option value="1">Ruim</option>
-        </select>
+            <label for="food_quality">Qualidade da Comida:</label>
+            <select id="food_quality" name="food_quality" required>
+                <option value="5">Excelente</option>
+                <option value="4">Muito Boa</option>
+                <option value="3">Boa</option>
+                <option value="2">Regular</option>
+                <option value="1">Ruim</option>
+            </select>
 
-        <label for="comments">Comentários ou Sugestões:</label>
-        <textarea id="comments" name="comments" rows="4" placeholder="Escreva seus comentários aqui..."></textarea>
+            <label for="service_quality">Qualidade do Serviço:</label>
+            <select id="service_quality" name="service_quality" required>
+                <option value="5">Excelente</option>
+                <option value="4">Muito Boa</option>
+                <option value="3">Boa</option>
+                <option value="2">Regular</option>
+                <option value="1">Ruim</option>
+            </select>
 
-        <input type="submit" value="Enviar Pesquisa">
-    </form>
+            <label for="comments">Comentários ou Sugestões:</label>
+            <textarea id="comments" name="comments" rows="3" placeholder="Escreva seus comentários aqui..."></textarea>
+
+            <input type="submit" value="Enviar Pesquisa">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
+        <a href="pratos_principais.html">&larr; Página Anterior</a>
+        <a href="bebidas-02.html">Próxima Página &rarr;</a>
+    </footer>
+
 </body>
 </html>
