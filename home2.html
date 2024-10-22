@@ -1,104 +1,248 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>La Petit Restaurante</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="./script.js" defer></script>
+  <title>Restaurant lA PETIT</title>
 </head>
+
 <body>
-    <header>
-        <img src="./img/IMG-20240924-WA0016.jpg" alt="Logo do restaurante">
-        <nav>
-            <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
+  <header>
+    <h1>LA PETIT<span class="span-text">.</span></h1>
+    <div class="menu-toggle"></div>
+    <nav>
+      <ul>
+        <li class="list-item"> <a href="./home2.html">Home</a></li>
+        <li class="list-item"> <a href="./aperitivos.html">Aperitivos</a></li>
+        <li class="list-item"> <a href="./entradas2.html">Entradas</a></li>
+        <li class="list-item"> <a href="./pratos_principais.html">Pratos Principais</a></li>
+        <li class="list-item"> <a href="./bebidas-01.html">Bebidas Alcoólicas</a></li>
+        <li class="list-item"> <a href="./bebidas-02.html">Bebidas Não-alcóolicas</a></li>
+        <li class="list-item"> <a href="./sobremesas2.html">Sobremesas</a></li>   
+        <li class="list-item"> <a href="./full course.html">Faça seu pedido</a></li>
+        <li class="list-item"> <a href="./drinks selector.html">Escolha sua bebida</a></li>
+        <li class="list-item"> <a href="./formulário_Experiencia.html">Avalie sua experiência</a></li>
 
-                <li>
-                    <a href="">Entradas</a>
-                </li>
+    </ul>
+    </nav>
+  </header>
 
-                <li>
-                    <a href="">Pratos Principais</a>
-                </li>
 
-                <li>
-                    <a href="">Acompanhamentos</a>
-                </li>
+  <section class="hero">
+    <div class="branding-container">
+      <h2 class="slogan">La Petit Cuisine Française </h2>
+      <p>Com um cardápio que inclui clássicos como coq au vin e crème brûlée, o restaurante destaca-se pelo uso de ingredientes frescos e locais. A decoração charmosa e o ambiente acolhedor fazem de La Petit Cuisine um lugar perfeito para encontros familiares e com amigos, onde cada prato conta uma história e celebra a tradição da boa comida.</p>
+      <a href="#menu" class="btn">Nosso Menu</a>
+    </div>
 
-                <li>
-                    <a href="">Sobremesas</a>
-                </li>
+  </section>
+  <main>
+    <section class="about" id="about">
+      <div class="text">
+        <h2> <span class="span-text">S</span>obre Nós</h2>
+        <p>La Petit Cuisine Française, inaugurado em 2020, é um aconchegante restaurante fundado por Jean-Claude, um chef apaixonado pela culinária francesa, nascido em 1958 na pequena vila de Saint-Rémy-de-Provence. Desde cedo, aprendeu a cozinhar com sua avó e, após anos em Paris, decidiu abrir seu próprio bistrô.
+          <br> 
+          Com um cardápio que inclui clássicos como coq au vin e crème brûlée, o restaurante destaca-se pelo uso de ingredientes frescos e locais. A decoração charmosa e o ambiente acolhedor fazem de La Petit Cuisine um lugar perfeito para encontros familiares e com amigos, onde cada prato conta uma história e celebra a tradição da boa comida.
+        </p>
+      </div>
 
-                <li>
-                    <a href="">Bebidas</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>La Petit Cuisine Française</h1>
-        <br>
-        <h2>Descubra o encanto da França no La Petit Cuisine Française! 🇫🇷 Delicie-se com pratos autênticos, preparações cuidadosas e um ambiente acolhedor que faz você se sentir em Paris. Venha saborear a verdadeira experiência culinária francesa! Reserve sua mesa hoje mesmo!</h2>
-        <br>
-        <section>
-            <div>
-                <h3>Sobre Nós</h3> 
-                <p>Em 1958, o La Petit Cuisine Française surgiu do sonho de um jovem chef francês que desejava compartilhar a rica gastronomia de sua terra natal. Localizado em uma charmosa rua de paralelepípedos, o restaurante logo se destacou pela autenticidade de suas receitas clássicas.</p>
+      <div class="image-container">
+        <img src="./img/coq-au.png" alt="Ratatui de Frango">
+      </div>
+    </section>
 
-                <p>Nos anos 60, rapidamente se tornou um ponto de encontro para os amantes da culinária, atraindo tanto moradores quanto turistas com o aroma irresistível de coq au vin, bouillabaisse e tarte Tatin. A atmosfera acolhedora e o atendimento atencioso garantiam uma experiência memorável a cada visita.</p>
-            </div>
-            <div>
-                <p>
-                    No La Petit Cuisine Française, a qualidade da comida é uma verdadeira prioridade. Cada prato é preparado com ingredientes frescos e selecionados, refletindo o compromisso do restaurante com a autenticidade da culinária francesa. O chef utiliza técnicas tradicionais, garantindo que cada receita mantenha seu caráter original e sabor inigualável.
-                </p>
-            </div>
-        </section>
-        <br>
-        <section>
-            <h3>Faça sua Reserva</h3>
-            <form action="reservar.php" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+    <section class="menu" id="menu">
+      <div class="text">
+        <h2>Nosso <span class="span-text">M</span>enu </h2>
+        <p>O La Petit é uma empresa de muito sucesso. </p>
+      </div>
 
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
+      <div class="content">
 
-                <label for="data">Data:</label>
-                <input type="date" id="data" name="data" required>
-
-                <label for="hora">Hora:</label>
-                <input type="time" id="hora" name="hora" required>
-
-                <label for="pessoas">Número de Pessoas:</label>
-                <input type="number" id="pessoas" name="pessoas" min="1" max="20" required>
-
-                <button type="submit">Reservar</button>
-            </form>
-        </section>
-    </main>
-    <footer role="contentinfo">
-        <p>Contato: (xx) xxxx-xxxx | Email: contato@lapetit.com</p>
-        <p>&copy; 2024 La Petit Restaurante. Todos os direitos reservados.</p>
-        <div class="social-media">
-            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-            <a href="https://twitter.com/" target="_blank">Twitter</a>
+        <div class="content-container">
+          <div class="image-container">
+            <img src="./img/penne-bolognese-.png" alt="Pene Bolonhese">
+          </div>
+          <div class="type-of-food-container">
+            <h2>Special Pasta</h2>
+          </div>
         </div>
-        <div class="payment-methods"></div>
-            <h4>Aceitamos os seguintes cartões:</h4>
-            <img src="https://guiadacidadesc.com.br/wp-content/uploads/2019/02/logos-cart%C3%B5es-de-credito-guia-da-cidade-sc.png" alt="Visa" width="50">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/MasterCard_logo.svg" alt="MasterCard" width="50">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/American_Express_logo.svg" alt="American Express" width="50">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Discover_Card_logo.svg" alt="Discover" width="50">
+
+        <div class="content-container">
+          <div class="image-container">
+            <img src="./img/Salad_fresc.png" alt="Salada Fresca">
+          </div>
+          <div class="type-of-food-container">
+            <h2>Special Salads</h2>
+          </div>
         </div>
+
+
+        <div class="content-container">
+          <div class="image-container">
+            <img src="./img/soup-chicken.png" alt="Sopa de galinha">
+          </div>
+          <div class="type-of-food-container">
+            <h2>Special Soups</h2>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="#menu" class="btn">Veja todos</a>
+      </div>
+
+    </section>
+
+    <section class="experts" id="experts">
+      <div class="text">
+        <h2>Nossos <span class="span-text">C</span>hefes </h2>
+        <p>O La Prtit é uma cosinha renomada de sucesso </p>
+      </div>
+
+      <div class="expert-content">
+
+        <div class="expert-content-container">
+          <div class="image-container">
+            <img src="./img/Chefe Clarice.jpg" alt="Chefe Clarice">
+
+            <p class="text">
+              Chefe Clarice
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="expert-content-container">
+          <div class="image-container">
+            <img src="./img/Chef_Pierre.avif" alt="Chef Chef_Pierre">
+            <p class="text">
+              Chefe Pierre
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="expert-content-container">
+          <div class="image-container">
+            <img src="./img/Chefe_Celine.jpg" alt="Chef Celine">
+            <p class="text">
+              Chef Celine
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="expert-content-container">
+          <div class="image-container">
+            <img src="./img/Chef_Jean.jpg" alt="Chefe Jean">
+            <p class="text">
+              Chef Jean
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="text">
+        <h2>Eles disseram sobre <span class="span-text">Nós</span> </h2>
+        <p>Cada comentário é importante para nos ajuda a aprimorar ainda mais a experiência no La Petit</p>
+      </div>
+
+      <div class="content">
+        <div class="testimonial-container">
+          <div class="testimonial-image">
+            <img src="https://www.tribunapr.com.br/wp-content/uploads/2020/08/16145536/jovem-feliz-freepik-ArthurHidden-1.jpg" alt="">
+          </div>
+
+          <div class="testimonial-text">
+            <p>Minha experiência no La Petit foi simplesmente encantadora! Desde o momento em que entrei, fui recebido com um atendimento caloroso e atencioso. O ambiente é aconchegante, com uma decoração que mistura elegância e charme.
+
+            </p>
+          </div>
+
+          <div class="testimonial-name-container">
+            <h3 class="testimonial-name">
+              Catarrine Dion
+            </h3>
+          </div>
+        </div>
+
+        <div class="testimonial-container">
+          <div class="testimonial-image">
+            <img src="https://img.freepik.com/fotos-premium/retrato-de-uma-mulher-com-excesso-de-peso-durante-uma-viagem-ao-mundo-e-fundo-de-ferias_1078161-2032597.jpg" alt="">
+          </div>
+
+          <div class="testimonial-text">
+            <p>O menu é uma verdadeira viagem pela culinária, com pratos que combinam sabores autênticos e ingredientes frescos. Experimentei o risoto de frutos do mar e fiquei impressionado com a combinação de sabores e a apresentação impecável. Para a sobremesa, a tarte tatin foi a cereja do bolo – doce na medida certa e simplesmente divina!</p>
+          </div>
+
+          <div class="testimonial-name-container">
+            <h3 class="testimonial-name">
+              Samir Renê
+            </h3>
+          </div>
+        </div>
+
+
+        <div class="testimonial-container">
+          <div class="testimonial-image">
+            <img src="https://www.pngall.com/wp-content/uploads/2016/04/Happy-Person-Transparent.png" alt="">
+          </div>
+
+          <div class="testimonial-text">
+            <p>Além disso, a carta de vinhos é bem selecionada e o sommelier fez ótimas sugestões para harmonizar com nossos pratos. Sem dúvida, o La Petit se tornou um dos meus lugares favoritos para jantar. Recomendo a todos que buscam uma experiência gastronômica memorável!</p>
+          </div>
+
+          <div class="testimonial-name-container">
+            <h3 class="testimonial-name">
+              Zinedin Lafae
+            </h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact-form" id="contact">
+      <div class="text">
+        <h2> <span class="span-text">E</span>ntre em contato</h2>
+        <p>Estamos ansiosos para compartilhar uma experiência gastronômica inesquecível com você</p>
+      </div>
+
+      <div class="contact-form-container">
+
+
+        <form class="form">
+          <div class="contact-form-heading">
+            <h3>Enviar mensagem</h3>
+
+          </div>
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <textarea name="Message" id="message" placeholder="Your Message"></textarea>
+          <button class="btn send-btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
     </footer>
+
+  </main>
 </body>
+
 </html>
