@@ -1,0 +1,98 @@
+
+
+<html>
+<title>La Petit Cuisine Française</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+	.dropbtn {
+  background-color:
+  color: white;
+  padding: 14x;
+  font-size: 14x;
+  border: none;
+  cursor: pointer;
+
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+<body 
+style=
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;}
+</style>
+<body style="background-color:#DAC786;">
+
+<div class="w3-top" "dropdown">
+  <div class="bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+     <button onclick="myFunction()" class="bar w3-button dropbtn">La Petit Cuisine Française</button>
+  	<div id="myDropdown" class="dropdown-content">
+   		<a href="">Home</a>
+  		<a href="">Aperitivos</a>
+ 		<a href="">Entradas</a>
+        	<a href="">Pratos Principais</a>
+        	<a href="">Bebidas Alcoólicas</a>
+        	<a href="">Bebidas não Alcoólicas</a>
+        	<a href="">Sobremesas</a>
+ 		<a href="">Selecione seu Course</a>
+ 		<a href="">Selecione sua Bebiba</a>
+  </div>
+</div>
+
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+  </div>
+</div>
+
+
+  </div>
+</header>
+
