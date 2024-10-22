@@ -42,6 +42,8 @@ section {
   font-weight: 400;
 }
 
+/* Header start */
+
 header {
   width: 94vw;
   display: flex;
@@ -61,7 +63,6 @@ header h1 {
   font-weight: 700;
 }
 
-
 .span-text {
   color: var(--main--color);
 }
@@ -75,10 +76,11 @@ nav ul {
   display: flex;
   position: relative;
   list-style-type: none;
+  font-size: 0.7rem;
 }
 
 nav ul li {
-  margin-left: 1.3rem;
+  margin-left: 0.8rem;
 }
 
 nav ul li a {
@@ -105,6 +107,9 @@ header.sticky h1 {
 header.sticky a {
   color: var(--main-black-color);
 }
+/* header end */
+
+/* hero start */
 
 .hero {
   background: url("./images/food2.jpg");
@@ -143,6 +148,10 @@ header.sticky a {
   letter-spacing: 6px;
 }
 
+/* hero end */
+
+/* about us start */
+
 .about {
   display: flex;
   justify-content: space-around;
@@ -161,6 +170,10 @@ header.sticky a {
   height: 70%;
   object-fit: cover;
 }
+
+/* about us end */
+
+/* menu start */
 
 .menu {
   display: flex;
@@ -201,6 +214,10 @@ header.sticky a {
   text-align: center;
 }
 
+/* menu end */
+
+/* experts start */
+
 .experts .text {
   text-align: center;
 }
@@ -234,6 +251,10 @@ header.sticky a {
 .image-container .text {
   margin: 0 auto;
 }
+
+/* experts end */
+
+/* Testimonials start */
 
 .testimonials {
   background: url("./images/bg3.jpg");
@@ -298,6 +319,10 @@ header.sticky a {
   margin-top: 1rem;
 }
 
+/* Testimonials end */
+
+/* Contact form start */
+
 .contact-form {
   background: url("./images/tomatos.jpg");
   background-size: cover;
@@ -346,8 +371,14 @@ textarea {
   margin: 0;
 }
 
+/* Contact form End */
+
 footer {
   text-align: center;
+  padding: 20px;
+  background-color: #FFF5E1;
+  color: black;
+  margin-top: 40
 }
 
 @media (max-width: 991px) {
@@ -421,6 +452,8 @@ footer {
     font-size: 2rem;
   }
 
+  /* about */
+
   .about {
     flex-direction: column;
   }
@@ -438,6 +471,8 @@ footer {
     height: 20rem;
     margin-top: 1rem;
   }
+
+  /* Menu */
 
   .menu .content {
     justify-content: space-evenly;
@@ -462,6 +497,8 @@ footer {
   .testimonial-container {
     width: 250px;
   }
+
+  /* contact form */
 
   .contact-form {
     padding: 0;
