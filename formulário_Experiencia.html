@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Playfair Display', serif;
-            background-color: #fff8e1;
+            background-color: #DAC786;
             color: #333;
             margin: 0;
             padding: 0;
@@ -84,14 +84,14 @@
 
         .container {
             max-width: 800px;
-            margin: 100px auto 0;
+            margin: 100px auto 0; /* Adicionada margem superior para visibilidade do título */
             padding: 20px;
             padding-bottom: 40px;
         }
 
         h1 {
             text-align: center;
-            color: #04AA6D;
+            color: black;
             margin-top: 20px;
         }
 
@@ -121,11 +121,6 @@
             font-size: 14px;
         }
 
-        textarea {
-            max-height: 100px;
-            overflow-y: auto;
-        }
-
         input[type="submit"] {
             background-color: #04AA6D;
             color: white;
@@ -143,12 +138,12 @@
 
         footer {
             text-align: center;
-            padding: 5px; /* Reduzido para ocupar menos espaço */
-            background-color: #333;
-            color: white;
-            position: fixed;
+            padding: 10px; /* Ajustado para mais espaço */
+            background-color: white;
+            color: black;
+            position: relative; /* Ajustado para permitir mais espaço */
             width: 100%;
-            bottom: 0;
+            margin-top: 20px; /* Adicionada margem superior para espaçamento */
         }
 
         footer a {
@@ -160,7 +155,6 @@
 </head>
 <body>
 
-    <!-- Cabeçalho -->
     <div class="w3-top">
         <div class="bar">
             <a href="#home">La Petit Cuisine Française</a>
@@ -225,7 +219,7 @@
             </select>
 
             <label for="comments">Comentários ou Sugestões:</label>
-            <textarea id="comments" name="comments" rows="3" maxlength="500" placeholder="Escreva seus comentários aqui..."></textarea>
+            <textarea id="comments" name="comments" rows="3" placeholder="Escreva seus comentários aqui..."></textarea>
 
             <input type="submit" value="Enviar Pesquisa">
         </form>
@@ -233,8 +227,7 @@
 
     <footer>
         <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
-        <a href="pratos_principais.html">&larr; Página Anterior</a>
-        <a href="bebidas-02.html">Próxima Página &rarr;</a>
+        <a href="drinks selector.html">&larr; Página Anterior</a>
     </footer>
 
     <script>
