@@ -1,7 +1,7 @@
 /* Cores e Fonte */
 body {
     background-color: #DAC786; /* Cor de fundo suave */
-    font-family: 'Playfair Display', serif; /* Fonte elegante */
+    font-family: serif, 'Playfair Display'; /* Fonte elegante */
     color: #333;
     margin: 0;
     padding: 0;
@@ -61,7 +61,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 1em;
+    font-size: 1.1em;
     transition: color 0.3s;
 }
 nav ul li a:hover {
@@ -161,6 +161,10 @@ input[type="submit"]:hover {
     object-fit: cover;
     border-radius: 50%;
     float: right;
+}
+
+.menu-item p {
+    font-size: 1.1rem;
 }
 /* Estilização dos pratos */
 .pratos {

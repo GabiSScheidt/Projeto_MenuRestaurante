@@ -1,3 +1,15 @@
+// script da nav //
+
+function toggleMenu() {
+  var menu = document.getElementById('menu');
+  if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+  } else {
+      menu.style.display = 'block';
+  }
+}
+
+// Script da home //
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0);

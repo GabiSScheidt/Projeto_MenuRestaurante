@@ -1,203 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./CSS/home.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <script src="./script.js" defer></script>
-  <title>Restaurant La Petit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/combined.css">
+    <title>Pratos Principais e Sobremesas</title>
+    
 </head>
-
 <body>
-  <header>
-    <h1>LA PETIT<span class="span-text">.</span></h1>
-    <div class="menu-toggle"></div>
-    <nav>
-      <ul>
-        <li class="list-item"> <a href="./aperitivos_entradas.html">Aperitivos e Entradas</a></li>
-        <li class="list-item"> <a href="./pratosPrincipais_ Sobremesas.html">Pratos Principais e Sobremesas</a></li>
-        <li class="list-item"> <a href="./bebidas.html">Bebidas</a></li>
-        <li class="list-item"> <a href="./full course.html">Faça seu pedido</a></li>
-        <li class="list-item"> <a href="./drinks selector.html">Escolha sua bebida</a></li>
-        <li class="list-item"> <a href="./formulário_Experiencia.html">Avalie sua experiência</a></li>
 
-    </ul>
-    </nav>
-  </header>
-
-
-  <section class="hero">
-    <div class="branding-container">
-      <h2 class="slogan">La Petit Cuisine Française </h2>
-      <p>Com um cardápio que inclui clássicos como coq au vin e crème brûlée, o restaurante destaca-se pelo uso de ingredientes frescos e locais. A decoração charmosa e o ambiente acolhedor fazem de La Petit Cuisine um lugar perfeito para encontros familiares e com amigos, onde cada prato conta uma história e celebra a tradição da boa comida.</p>
-      <a href="./aperitivos_entradas.html" class="btn">Nosso Menu</a>
+    <!-- Cabeçalho -->
+    <div class="w3-top">
+        <div class="bar">
+            <a href="#home">La Petit Cuisine Française</a>
+            <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+        </div>
     </div>
 
-  </section>
-  <main>
-    <section class="about" id="about">
-      <div class="text">
-        <h2> <span class="span-text">S</span>obre Nós</h2>
-        <p>La Petit Cuisine Française, inaugurado em 2020, é um aconchegante restaurante fundado por Jean-Claude, um chef apaixonado pela culinária francesa, nascido em 1958 na pequena vila de Saint-Rémy-de-Provence. Desde cedo, aprendeu a cozinhar com sua avó e, após anos em Paris, decidiu abrir seu próprio bistrô.
-          <br> 
-          Com um cardápio que inclui clássicos como coq au vin e crème brûlée, o restaurante destaca-se pelo uso de ingredientes frescos e locais. A decoração charmosa e o ambiente acolhedor fazem de La Petit Cuisine um lugar perfeito para encontros familiares e com amigos, onde cada prato conta uma história e celebra a tradição da boa comida.
-        </p>
-      </div>
+    <header>
+        <nav id="menu">
+          <ul>
+            <li class="list-item"><a href="index.html">Home</a></li>
+            <li class="list-item"><a href="aperitivos_entradas.html">Aperitivos e Entradas</a></li>
+            <li class="list-item"><a href="pratosPrincipais_ Sobremesas.html">Pratos Principais e Sobremesas</a></li>
+            <li class="list-item"><a href="bebidas.html">Bebidas</a></li>
+            <li class="list-item"><a href="Seletor_comida.html">Seletor de course</a></li>
+            <li class="list-item"><a href="Seletor_bebida.html">Seletor de bebidas</a></li>
+            <li class="list-item"><a href="formulario_Experiencia.html">Como Foi Experiência</a></li>
+          </ul>
+        </nav>
+    </header>
 
-      <div class="image-container">
-        <img src="./img/coq-au.png" alt="Ratatui de Frango">
-      </div>
-    </section>
+    <!-- Principal -->
+    <div class="container">
+        <h1>Plats Principaux</h1>
+        <div class="content">
 
+            <!-- Primeiro prato com Imagem -->
+             
+            <div class="pratos">
+                <h2>Spaghetti bolognaise</h2>
+                <p>Massa espaguete com molho de amêijoas frescas, alho, salsa e azeite.</p>
+                <p><em>Pâtes spaghetti avec sauce aux palourdes fraîches, ail, persil et huile d'olive.</em></p>
+                <p class="preco">R$ 60,00 / 10,00 €</p>
+            </div>
+            <div class="image">
+                <img src="./img/Spaghetti-alle-vongole.jpeg" alt="Spaghetti alle vongole">
+            </div>
 
+            <!-- Segundo prato -->
+            <div class="pratos">
+                <h2>Escalope à la Milanaise</h2>
+                <p>Bife bovino à milanesa com molho de tomate e cebola, acompanha batatas rústicas.</p>
+                <p><em>
+                    Steak de bœuf pané, sauce tomate et oignon, servi avec pommes de terre rustiques.</em></p>
+                <p class="preco">R$ 78,00 / 13,00 €</p>
+            </div>
 
-    <section class="experts" id="experts">
-      <div class="text">
-        <h2>Nossos <span class="span-text">C</span>hefes </h2>
-        <p>O La Prtit é uma cosinha renomada de sucesso </p>
-      </div>
+            <!-- Terceiro prato -->
+            <div class="pratos">
+                <h2>Ratatouille</h2>
+                <p>Legumes que combina berinjela, abobrinha, pimentão, tomate e cebola, cozidos em azeite de oliva e temperados com ervas aromáticas.</p>
+                <p><em>Des légumes qui associent aubergines, courgettes, poivrons, tomates et oignons, cuits dans l'huile d'olive et assaisonnés d'herbes aromatiques.</em></p>
+                <p class="preco">R$ 54,00 / 9,00 €</p>
+            </div>
 
-      <div class="expert-content">
+            <!-- Quarto prato com Imagem -->
+            <div class="image">
+                <img src="./img/risoto-cremoso-de-cogumelos-com-queijo-parmesao-e-ervas-frescas-generative-ai_862745-845.jpg" alt="Risotto ai funghi">
+            </div>           
+            <div class="pratos">
+                <h2>Risotto ai funghi</h2>
+                <p>Risoto cremoso com cogumelos funghi e parmesão.</p>
+                <p><em>
+                    Risotto crémeux aux champignons et parmesan.</em></p>
+                <p class="preco">R$ 84,00 / 14,00 €</p>
+            </div>
 
-        <div class="expert-content-container">
-          <div class="image-container">
-            <img src="./img/Chefe Clarice.jpg" alt="Chefe Clarice">
-
-            <p class="text">
-              Chefe Clarice
-            </p>
-          </div>
-
+            <!-- Quinto prato -->
+            <div class="pratos">
+                <h2>Ravioli vegetariano</h2>
+                <p>Ravioli de ricota e espinafre, com molho de manteiga e sálvia.</p>
+                <p><em>Raviolis à la ricotta et aux épinards, sauce au beurre et à la sauge.</em></p>
+                <p class="preco">R$ 75,00 / 12,50 €</p>
+            </div>
+            <!-- Sexto prato -->
+            <div class="pratos">
+                <h2>Paillard di Filetto</h2>
+                <p>Filé Mignon ao molho madeira, acompanhado de purê de batatas.</p>
+                <p><em>Filet Mignon sauce Madère, accompagné de purée de pommes de terre.</em></p>
+                <p class="preco">R$ 108,00 / 18,00 €</p>
+            </div>
         </div>
+        <h1>Desserts</h1>
+        <div class="content">
 
+            <!-- Prato com Imagem -->
+            <div class="pratos">
+                <h2>Petit Gateau</h2>
+                <p>Petit Gateau essa sobremesa, com seu exterior crocante e interior cremoso, é uma explosão de sabor.</p>
+                <p><em>
+                    Petit Gateau ce dessert, avec son extérieur croquant et son intérieur crémeux, est une explosion de saveurs.</em></p>
+                <p class="preco">R$ 36,00 / 6,00 €</p>
+            </div>
+            <div class="image">
+                <img src="img/petit gateau.jpg" alt="Petit Gateau">
+            </div>
 
-        <div class="expert-content-container">
-          <div class="image-container">
-            <img src="./img/Chef_Pierre.avif" alt="Chef Chef_Pierre">
-            <p class="text">
-              Chefe Pierre
-            </p>
-          </div>
+            <!-- Prato sem imagem -->
+            <div class="pratos">
+                <h2>Pavê de Chocolate com Morango e Creme</h2>
+                <p>Camadas de biscoitos intercaladas com um cremoso doce de leite.</p>
+                <p><em>Des couches de biscuits entrecoupées d'un dulce de leche crémeux.</em></p>
+                <p class="preco">R$ 24,00 / 4,00 €</p>
+            </div>
 
+            <!-- Prato sem imagem  -->
+            <div class="pratos">
+                <h2>Torta de Limão</h2>
+                <p>Torta leve com sabor refrescante de limão e cobertura de merengue</p>
+                <p><em>Tarte légère au goût rafraîchissant de citron et garniture de meringue.</em></p>
+                <p class="preco">R$ 27,00 / 4,50 €</p>
+            </div>
+
+            <!-- Prato com imagem -->
+            <div class="pratos">
+                <h2>Brownie Frances</h2>
+                <p>Irresistível brownie de chocolate, crocante por fora e macio por dentro.</p>
+                <p><em>Irrésistible brownie au chocolat, croustillant à l'extérieur et moelleux à l'intérieur.</em></p>
+                <p class="preco">R$ 35,00 / 5,80 €</p>
+            </div>
+            <div class="image">
+                <img src="img/brownie.jpg" alt="Brownie francês">
+            </div>
+
+            <!-- Prato sem Imagem -->
+            <div class="pratos">
+                <h2>Mousse de Maracujá</h2>
+                <p>Mousse cremosa de maracujá, perfeita para os amantes de frutas cítricas</p>
+                <p><em>Mousse onctueuse aux fruits de la passion, parfaite pour les amateurs d'agrumes.</em></p>
+                <p class="preco">R$ 21,00 / 3,50 €</p>
+            </div>
         </div>
+    </div>
 
-
-        <div class="expert-content-container">
-          <div class="image-container">
-            <img src="./img/Chefe_Celine.jpg" alt="Chef Celine">
-            <p class="text">
-              Chef Celine
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="expert-content-container">
-          <div class="image-container">
-            <img src="./img/Chef_Jean.jpg" alt="Chefe Jean">
-            <p class="text">
-              Chef Jean
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-
-    <section class="testimonials" id="testimonials">
-      <div class="text">
-        <h2>Eles disseram sobre <span class="span-text">Nós</span> </h2>
-        <p>Cada comentário é importante para nos ajuda a aprimorar ainda mais a experiência no La Petit</p>
-      </div>
-
-      <div class="content">
-        <div class="testimonial-container">
-          <div class="testimonial-image">
-            <img src="https://www.tribunapr.com.br/wp-content/uploads/2020/08/16145536/jovem-feliz-freepik-ArthurHidden-1.jpg" alt="">
-          </div>
-
-          <div class="testimonial-text">
-            <p>Minha experiência no La Petit foi simplesmente encantadora! Desde o momento em que entrei, fui recebido com um atendimento caloroso e atencioso. O ambiente é aconchegante, com uma decoração que mistura elegância e charme.
-
-            </p>
-          </div>
-
-          <div class="testimonial-name-container">
-            <h3 class="testimonial-name">
-              Catarrine Dion
-            </h3>
-          </div>
-        </div>
-
-        <div class="testimonial-container">
-          <div class="testimonial-image">
-            <img src="https://img.freepik.com/fotos-premium/retrato-de-uma-mulher-com-excesso-de-peso-durante-uma-viagem-ao-mundo-e-fundo-de-ferias_1078161-2032597.jpg" alt="">
-          </div>
-
-          <div class="testimonial-text">
-            <p>O menu é uma verdadeira viagem pela culinária, com pratos que combinam sabores autênticos e ingredientes frescos. Experimentei o risoto de frutos do mar e fiquei impressionado com a combinação de sabores e a apresentação impecável. Para a sobremesa, a tarte tatin foi a cereja do bolo – doce na medida certa e simplesmente divina!</p>
-          </div>
-
-          <div class="testimonial-name-container">
-            <h3 class="testimonial-name">
-              Samir Renê
-            </h3>
-          </div>
-        </div>
-
-
-        <div class="testimonial-container">
-          <div class="testimonial-image">
-            <img src="https://www.pngall.com/wp-content/uploads/2016/04/Happy-Person-Transparent.png" alt="">
-          </div>
-
-          <div class="testimonial-text">
-            <p>Além disso, a carta de vinhos é bem selecionada e o sommelier fez ótimas sugestões para harmonizar com nossos pratos. Sem dúvida, o La Petit se tornou um dos meus lugares favoritos para jantar. Recomendo a todos que buscam uma experiência gastronômica memorável!</p>
-          </div>
-
-          <div class="testimonial-name-container">
-            <h3 class="testimonial-name">
-              Zinedin Lafae
-            </h3>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="contact-form" id="contact">
-      <div class="text">
-        <h2> <span class="span-text">E</span>ntre em contato</h2>
-        <p>Estamos ansiosos para compartilhar uma experiência gastronômica inesquecível com você</p>
-      </div>
-
-      <div class="contact-form-container">
-
-
-        <form class="formEntreemcontato">
-          <div class="contact-form-heading">
-            <h3>Enviar mensagem</h3>
-
-          </div>
-          <input type="text" placeholder="Name">
-          <input type="email" placeholder="Email">
-          <textarea name="Message" id="message" placeholder="Your Message"></textarea>
-          <button class="btn send-btn">Enviar</button>
-        </form>
-      </div>
-    </section>
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
+        <a href="aperitivos_entradas.html">&larr; Página Anterior</a>
+        <a href="bebidas.html">Próxima Página &rarr;</a>
     </footer>
-
-  </main>
+<script src="script.js"></script>
 </body>
-
 </html>
