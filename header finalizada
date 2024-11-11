@@ -46,14 +46,10 @@ h1, h2, h3, h4, h5, h6 {
        <button onclick="myFunction()" class="bar w3-button dropbtn">La Petit Cuisine Française</button>
       <div id="myDropdown" class="dropdown-content">
           <a href="">Home</a>
-          <a href="">Aperitivos</a>
-          <a href="">Entradas</a>
-          <a href="">Pratos Principais</a>
-          <a href="">Bebidas Alcoólicas</a>
-          <a href="">Bebidas não Alcoólicas</a>
-          <a href="">Sobremesas</a>
-          <a href="">Selecione seu Course</a>
-          <a href="">Selecione sua Bebiba</a>
+          <a href="">Aperitivos e Entradas</a>
+          <a href="">Pratos Principais e Sobremesas</a>
+          <a href="">Bebidas</a>
+          <a href="">Faça Seu Pedido</a>
     </div>
   </div>
 </header>
