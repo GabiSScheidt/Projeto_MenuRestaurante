@@ -321,59 +321,6 @@ header.sticky a {
 
 /* Testimonials end */
 
-/* Contact form start */
-
-.contact-form {
-  background: url("./images/tomatos.jpg");
-  background-size: cover;
-  padding: 3rem;
-
-}
-
-.contact-form .text {
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.contact-form-container {
-  margin-left: 5rem;
-}
-
-.formEntreemcontato {
-  background-color: #fff;
-  padding: 3rem 3rem;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.8);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 30%;
-}
-
-.formEntreemcontato input,
-.formEntreemcontato textarea {
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  width: 100%;
-}
-
-textarea {
-  height: 10rem;
-  width: 100%;
-  resize: none;
-}
-
-.send-btn {
-  outline: none;
-  font-size: 1.4rem;
-  font-weight: 300;
-  border: none;
-  margin: 0;
-}
-
-/* Contact form End */
-
 footer {
   text-align: center;
   padding: 10px; /* Ajustado para mais espaço */

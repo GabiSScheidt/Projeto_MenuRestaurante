@@ -10,13 +10,9 @@
 </head>
 <style>
 
-body {background-color:#dac786 ;
-
-}
-
 body {
+  background-color:#dac786 ;
   box-sizing: inherit;
-  
 }
 
 :root {
@@ -35,7 +31,7 @@ body {
   font-weight: 400;
 }
 
-/* hero start */
+/* Primeira parte do site */
 
 .hero {
   background: url("./images/food2.jpg");
@@ -74,22 +70,29 @@ body {
   letter-spacing: 6px;
 }
 
-/* hero end */
+/* Fim da primeira parte do site */
 
-/* about us start */
+/* Sobre nós */
 
 .about {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
 }
 
-.text {
-  width: 50%;
-}
+.about .text {
+  width: 100%;
+  }
 
-.image-container {
-  width: 48%;
-}
+.about .text p {
+  font-weight: 300;
+  }
+  
+.about .image-container {
+  width: 100%;
+  height: 20rem;
+  margin-top: 1rem;
+  }
 
 .image-container img {
   width: 100%;
@@ -97,52 +100,9 @@ body {
   object-fit: cover;
 }
 
-/* about us end */
+/* Fim sobre nós */
 
-/* menu start */
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.menu .text {
-  text-align: center;
-  padding-bottom: 1rem;
-}
-
-.menu .content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.content-container {
-  width: 280px;
-  height: 100%;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.8);
-  margin: 1rem;
-  padding: 1rem;
-}
-
-.content-container .image-container {
-  width: 100%;
-}
-
-.content-container .image-container img {
-  height: 20rem;
-}
-
-.type-of-food-container h2 {
-  font-weight: 300;
-  text-align: center;
-}
-
-/* menu end */
-
-/* experts start */
+/* Nossos chefes */
 
 .experts .text {
   text-align: center;
@@ -178,9 +138,9 @@ body {
   margin: 0 auto;
 }
 
-/* experts end */
+/* Fim nossos chefes */
 
-/* Testimonials start */
+/* Comentários */
 
 .testimonials {
   background: url("./images/bg3.jpg");
@@ -245,34 +205,9 @@ body {
   margin-top: 1rem;
 }
 
-/* Testimonials end */
-
-
-  /* about */
-
-  .about {
-    flex-direction: column;
-  }
-
-  .about .text {
-    width: 100%;
-  }
-
-  .about .text p {
-    font-weight: 300;
-  }
-
-  .about .image-container {
-    width: 100%;
-    height: 20rem;
-    margin-top: 1rem;
-  }
+/* Final dos comentários */
 
   /* Menu */
-
-  .menu .content {
-    justify-content: space-evenly;
-  }
 
   .content-container {
     width: 250px;
@@ -294,11 +229,9 @@ body {
     width: 250px;
   }
 
-
-}
-
+/* Menu com dropdown */
 	.dropbtn {
-  background-color:
+  background-color: transparent ;
   color: white;
   padding: 14x;
   font-size: 14x;
@@ -326,18 +259,35 @@ body {
 }
 
 .show {display: block;}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 10px; /* Ajustado para mais espaço */
+  background-color: #FFF5E1;
+  color: #333;
+  position: relative; /* Ajustado para permitir mais espaço */
+  width: 100%;
+  margin-top: 20px; /* Adicionada margem superior para espaçamento */
+}
+
+footer a {
+  color: #04AA6D;
+  text-decoration: none;
+  margin: 0 10px;
+}
 </style>
 <header>
-  <div class="w3-top" "dropdown">
+  <div class="w3-top" dropdown>
     <div class="bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
        <button onclick="myFunction()" class="bar w3-button dropbtn">La Petit Cuisine Française</button>
       <div id="myDropdown" class="dropdown-content">
-          <a href="">Home</a>
-          <a href="">Aperitivos e Entradas</a>
-          <a href="">Pratos Principais e Sobremesas</a>
-          <a href="">Bebidas</a>
-          <a href="">Faça Seu Pedido</a>
-          <a href="">Formulario De Experiência</a>
+          <a href="indexproject.html">Home</a>
+          <a href="aperitivos_entradas.html">Aperitivos e Entradas</a>
+          <a href="pratosPrincipais_ Sobremesas.html">Pratos Principais e Sobremesas</a>
+          <a href="bebidas.html">Bebidas</a>
+          <a href="Seletores.html">Faça Seu Pedido</a>
+          <a href="formulario_Experiencia.html">Formulario De Experiência</a>
     </div>
   </div>
 </header>
@@ -365,7 +315,7 @@ window.onclick = function(event) {
   <section class="hero">
     <div class="branding-container">
       <h2 class="slogan">La Petit Cuisine Française </h2>
-      <p>Com um cardápio que inclui clássicos como coq au vin e crème brûlée, o restaurante destaca-se pelo uso de ingredientes frescos e locais. A decoração charmosa e o ambiente acolhedor fazem de La Petit Cuisine um lugar perfeito para encontros familiares e com amigos, onde cada prato conta uma história e celebra a tradição da boa comida.</p>
+      <p>No La Petit, queremos que cada cliente se sinta em um verdadeiro refúgio francês, um local para desfrutar, relaxar e se apaixonar pela arte de comer bem. Venha nos visitar e descubra a magia dos sabores da França bem aqui, perto de você!</p>
       <a href="./aperitivos_entradas.html" class="btn">Nosso Menu</a>
     </div>
 
@@ -376,7 +326,7 @@ window.onclick = function(event) {
         <h2> <span class="span-text">S</span>obre Nós</h2>
         <p>La Petit Cuisine Française, inaugurado em 2020, é um aconchegante restaurante fundado por Jean-Claude, um chef apaixonado pela culinária francesa, nascido em 1958 na pequena vila de Saint-Rémy-de-Provence. Desde cedo, aprendeu a cozinhar com sua avó e, após anos em Paris, decidiu abrir seu próprio bistrô.
           <br> 
-          Com um cardápio que inclui clássicos como coq au vin e crème brûlée, o restaurante destaca-se pelo uso de ingredientes frescos e locais. A decoração charmosa e o ambiente acolhedor fazem de La Petit Cuisine um lugar perfeito para encontros familiares e com amigos, onde cada prato conta uma história e celebra a tradição da boa comida.
+          Com um cardápio que inclui vários clássicos, o restaurante destaca-se pelo uso de ingredientes frescos e locais. A decoração charmosa e o ambiente acolhedor fazem de La Petit Cuisine um lugar perfeito para encontros familiares e com amigos, onde cada prato conta uma história e celebra a tradição da boa comida.
         </p>
       </div>
 
@@ -390,7 +340,7 @@ window.onclick = function(event) {
     <section class="experts" id="experts">
       <div class="text">
         <h2>Nossos <span class="span-text">C</span>hefes </h2>
-        <p>O La Prtit é uma cosinha renomada de sucesso </p>
+        <p>O La Petit é uma cozinha renomada de sucesso. </p>
       </div>
 
       <div class="expert-content">
@@ -445,7 +395,7 @@ window.onclick = function(event) {
     <section class="testimonials" id="testimonials">
       <div class="text">
         <h2>Eles disseram sobre <span class="span-text">Nós</span> </h2>
-        <p>Cada comentário é importante para nos ajuda a aprimorar ainda mais a experiência no La Petit</p>
+        <p>Cada comentário é importante para nos ajudar a aprimorar ainda mais a experiência no La Petit</p>
       </div>
 
       <div class="content">
@@ -455,7 +405,7 @@ window.onclick = function(event) {
           </div>
 
           <div class="testimonial-text">
-            <p>Minha experiência no La Petit foi simplesmente encantadora! Desde o momento em que entrei, fui recebido com um atendimento caloroso e atencioso. O ambiente é aconchegante, com uma decoração que mistura elegância e charme.
+            <p>Minha experiência no La Petit foi simplesmente encantadora! Desde o momento em que entrei, fui recebida com um atendimento caloroso e atencioso. O ambiente é aconchegante, com uma decoração que mistura elegância e charme.
 
             </p>
           </div>
@@ -473,7 +423,7 @@ window.onclick = function(event) {
           </div>
 
           <div class="testimonial-text">
-            <p>O menu é uma verdadeira viagem pela culinária, com pratos que combinam sabores autênticos e ingredientes frescos. Experimentei o risoto de frutos do mar e fiquei impressionado com a combinação de sabores e a apresentação impecável. Para a sobremesa, a tarte tatin foi a cereja do bolo – doce na medida certa e simplesmente divina!</p>
+            <p>O menu é uma verdadeira viagem pela culinária, com pratos que combinam sabores autênticos e ingredientes frescos. Experimentei alguns pratos e fiquei impressionada com a combinação de sabores e a apresentação impecável. A sobremesa foi a cereja do bolo – doce na medida certa e simplesmente divina!</p>
           </div>
 
           <div class="testimonial-name-container">
@@ -490,7 +440,7 @@ window.onclick = function(event) {
           </div>
 
           <div class="testimonial-text">
-            <p>Além disso, a carta de vinhos é bem selecionada e o sommelier fez ótimas sugestões para harmonizar com nossos pratos. Sem dúvida, o La Petit se tornou um dos meus lugares favoritos para jantar. Recomendo a todos que buscam uma experiência gastronômica memorável!</p>
+            <p>A carta de vinhos é bem selecionada e o sommelier fez ótimas sugestões para harmonizar com nossos pratos. Sem dúvida, o La Petit se tornou um dos meus lugares favoritos para jantar. Recomendo a todos que buscam uma experiência gastronômica memorável!</p>
           </div>
 
           <div class="testimonial-name-container">
@@ -503,7 +453,8 @@ window.onclick = function(event) {
       </div>
     </section>
     <footer>
-        <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
+      <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
+      <a href="aperitivos_entradas.html">Próxima Página &rarr;</a>
     </footer>
 
   </main>
