@@ -6,7 +6,32 @@
     <title>Pesquisa de Satisfação</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/combined.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: left;
+        }
+        .rating > span {
+            display: inline-block;
+            position: relative;
+            width: 1.5em;
+            font-size: 40px; /* Aumentado para melhor visibilidade */
+            color: #ccc;
+            cursor: pointer;
+        }
+        .rating > span:hover:before,
+        .rating > span:hover ~ span:before {
+            content: "\2605";
+            position: absolute;
+            color: #ffd700;
+        }
+        .rating-text {
+            margin-left: 10px;
+            font-size: 18px; /* Aumentado para melhor visibilidade */
+        }
+    </style>
 </head>
 <body>
 
@@ -32,7 +57,7 @@
 
     <div class="container">
         <h1>Pesquisa de Satisfação</h1>
-        <form action="/submit_survey" method="post">
+        <form action="/submit_survey" method="post" id="surveyForm">
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required>
 
@@ -43,31 +68,25 @@
             <input type="text" id="order_number" name="order_number" required>
 
             <label for="rating">Como você avalia sua experiência geral?</label>
-            <select id="rating" name="rating" required>
-                <option value="5">Excelente</option>
-                <option value="4">Muito Bom</option>
-                <option value="3">Bom</option>
-                <option value="2">Regular</option>
-                <option value="1">Ruim</option>
-            </select>
+            <div class="rating" id="rating">
+                <span data-value="5">☆</span><span data-value="4">☆</span><span data-value="3">☆</span><span data-value="2">☆</span><span data-value="1">☆</span>
+            </div>
+            <span class="rating-text" id="rating-text"></span>
+            <input type="hidden" name="rating" id="rating-value">
 
             <label for="food_quality">Qualidade da Comida:</label>
-            <select id="food_quality" name="food_quality" required>
-                <option value="5">Excelente</option>
-                <option value="4">Muito Boa</option>
-                <option value="3">Boa</option>
-                <option value="2">Regular</option>
-                <option value="1">Ruim</option>
-            </select>
+            <div class="rating" id="food_quality">
+                <span data-value="5">☆</span><span data-value="4">☆</span><span data-value="3">☆</span><span data-value="2">☆</span><span data-value="1">☆</span>
+            </div>
+            <span class="rating-text" id="food-quality-text"></span>
+            <input type="hidden" name="food_quality" id="food-quality-value">
 
             <label for="service_quality">Qualidade do Serviço:</label>
-            <select id="service_quality" name="service_quality" required>
-                <option value="5">Excelente</option>
-                <option value="4">Muito Boa</option>
-                <option value="3">Boa</option>
-                <option value="2">Regular</option>
-                <option value="1">Ruim</option>
-            </select>
+            <div class="rating" id="service_quality">
+                <span data-value="5">☆</span><span data-value="4">☆</span><span data-value="3">☆</span><span data-value="2">☆</span><span data-value="1">☆</span>
+            </div>
+            <span class="rating-text" id="service-quality-text"></span>
+            <input type="hidden" name="service_quality" id="service-quality-value">
 
             <label for="comments">Comentários ou Sugestões:</label>
             <textarea id="comments" name="comments" rows="3" placeholder="Escreva seus comentários aqui..."></textarea>
@@ -81,6 +100,77 @@
         <a href="Seletores.html">&larr; Página Anterior</a>
     </footer>
 
-<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('surveyForm');
+    const nameInput = document.getElementById('name');
+    const ratingDivs = document.querySelectorAll('.rating');
+    const ratingTexts = {
+        1: 'Ruim',
+        2: 'Regular',
+        3: 'Bom',
+        4: 'Muito bom',
+        5: 'Excelente'
+    };
+
+    // Validação do nome
+    function validateName(name) {
+        const nameParts = name.trim().split(/\s+/);
+        return /^[A-Za-zÀ-ÿ\s]+$/.test(name) && nameParts.length >= 2 && nameParts.every(part => part.length >= 3);
+    }
+
+    // Configuração das estrelas
+    ratingDivs.forEach(div => {
+        const stars = div.querySelectorAll('span');
+        const textSpan = document.getElementById(`${div.id}-text`);
+        const hiddenInput = document.getElementById(`${div.id}-value`);
+
+        stars.forEach(star => {
+            star.addEventListener('mouseover', function() {
+                const value = this.getAttribute('data-value');
+                textSpan.textContent = ratingTexts[value];
+                for (let i = 0; i < stars.length; i++) {
+                    if (i < value) {
+                        stars[i].style.color = '#ffd700';
+                    } else {
+                        stars[i].style.color = '#ccc';
+                    }
+                }
+            });
+
+            star.addEventListener('click', function() {
+                const value = this.getAttribute('data-value');
+                hiddenInput.value = value;
+            });
+        });
+
+        div.addEventListener('mouseout', function() {
+            const value = hiddenInput.value;
+            textSpan.textContent = value ? ratingTexts[value] : '';
+            stars.forEach((star, index) => {
+                star.style.color = index < value ? '#ffd700' : '#ccc';
+            });
+        });
+    });
+
+    // Validação do formulário
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!validateName(nameInput.value)) {
+            alert('Por favor, insira um nome válido (pelo menos dois nomes, cada um com no mínimo três letras, contendo apenas letras).');
+            return;
+        }
+        // Exibir pop-up de confirmação
+        const userResponse = confirm('Obrigado! Agora que nos já avaliou, deseja conhecer e fazer parte do clube La Petit?');
+        if (userResponse) {
+            // Redirecionar para o novo formulário
+            window.location.href = 'clubepetit.html';
+        } else {
+            // Redirecionar para a página inicial
+            window.location.href = 'indexproject.html';
+        }
+    });
+});
+</script>
 </body>
 </html>
