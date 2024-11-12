@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="./script.js" defer></script>
+  <title>Restaurant La Petit</title>
+</head>
+<style>
+
+body {background-color:#dac786 ;
+
+}
+
+body {
+  box-sizing: inherit;
+  
+}
+
+:root {
+  --main--color: #ff0157;
+  --main-text-color: rgb(31, 1, 1);
+  --main-black-color: #111;
+}
+
+.text h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.text p {
+  font-weight: 400;
+}
+
+/* hero start */
+
+.hero {
+  background: url("./images/food2.jpg");
+  background-size: cover;
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.branding-container {
+  max-width: 900px;
+  text-align: center;
+}
+
+.hero .slogan {
+  font-size: 4rem;
+}
+
+.btn {
+  display: inline-block;
+  margin: 1rem;
+  background-color: var(--main--color);
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  transition: 0.5s;
+}
+
+.btn:hover {
+  letter-spacing: 6px;
+}
+
+/* hero end */
+
+/* about us start */
+
+.about {
+  display: flex;
+  justify-content: space-around;
+}
+
+.text {
+  width: 50%;
+}
+
+.image-container {
+  width: 48%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+/* about us end */
+
+/* menu start */
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu .text {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.menu .content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content-container {
+  width: 280px;
+  height: 100%;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.8);
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.content-container .image-container {
+  width: 100%;
+}
+
+.content-container .image-container img {
+  height: 20rem;
+}
+
+.type-of-food-container h2 {
+  font-weight: 300;
+  text-align: center;
+}
+
+/* menu end */
+
+/* experts start */
+
+.experts .text {
+  text-align: center;
+}
+
+.experts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.expert-content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.expert-content-container {
+  width: 15rem;
+  height: 100%;
+  margin-left: 1.5rem;
+}
+
+.expert-content-container .image-container {
+  height: 30rem;
+  width: 100%;
+}
+
+.image-container .text {
+  margin: 0 auto;
+}
+
+/* experts end */
+
+/* Testimonials start */
+
+.testimonials {
+  background: url("./images/bg3.jpg");
+  background-size: cover;
+
+  padding: 0rem -7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials .text {
+  padding-top: 5rem;
+}
+
+.testimonials .text h2,
+.testimonials .text p {
+  color: var(--main-text-color);
+  text-align: center;
+}
+
+.testimonial-container {
+  background-color: #fff;
+  margin: 1rem;
+  padding: 3rem;
+  width: 15rem;
+}
+
+.testimonial-image {
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem auto;
+}
+
+.testimonial-image img {
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials .content {
+  display: flex;
+  padding-bottom: 3rem;
+}
+
+.testimonial-text {
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.testimonial-name-container {
+  text-align: center;
+  color: var(--main--color);
+  margin-top: 1rem;
+}
+
+/* Testimonials end */
+
+
+  /* about */
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about .text {
+    width: 100%;
+  }
+
+  .about .text p {
+    font-weight: 300;
+  }
+
+  .about .image-container {
+    width: 100%;
+    height: 20rem;
+    margin-top: 1rem;
+  }
+
+  /* Menu */
+
+  .menu .content {
+    justify-content: space-evenly;
+  }
+
+  .content-container {
+    width: 250px;
+  }
+
+  .content-container .image-container img {
+    height: 15rem;
+  }
+
+  .expert-content-container .image-container {
+    height: 25rem;
+  }
+
+  .testimonials .content {
+    flex-direction: column;
+  }
+
+  .testimonial-container {
+    width: 250px;
+  }
+
+
+}
+
+	.dropbtn {
+  background-color:
+  color: white;
+  padding: 14x;
+  font-size: 14x;
+  border: none;
+  cursor: pointer;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 660px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display: block;}
+</style>
+<header>
+  <div class="w3-top" "dropdown">
+    <div class="bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+       <button onclick="myFunction()" class="bar w3-button dropbtn">La Petit Cuisine Française</button>
+      <div id="myDropdown" class="dropdown-content">
+          <a href="">Home</a>
+          <a href="">Aperitivos e Entradas</a>
+          <a href="">Pratos Principais e Sobremesas</a>
+          <a href="">Bebidas</a>
+          <a href="">Faça Seu Pedido</a>
+          <a href="">Formulario De Experiência</a>
+    </div>
+  </div>
+</header>
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<body>
+  <section class="hero">
+    <div class="branding-container">
+      <h2 class="slogan">La Petit Cuisine Française </h2>
+      <p>Com um cardápio que inclui clássicos como coq au vin e crème brûlée, o restaurante destaca-se pelo uso de ingredientes frescos e locais. A decoração charmosa e o ambiente acolhedor fazem de La Petit Cuisine um lugar perfeito para encontros familiares e com amigos, onde cada prato conta uma história e celebra a tradição da boa comida.</p>
+      <a href="./aperitivos_entradas.html" class="btn">Nosso Menu</a>
+    </div>
+
+  </section>
+  <main>
+    <section class="about" id="about">
+      <div class="text">
+        <h2> <span class="span-text">S</span>obre Nós</h2>
+        <p>La Petit Cuisine Française, inaugurado em 2020, é um aconchegante restaurante fundado por Jean-Claude, um chef apaixonado pela culinária francesa, nascido em 1958 na pequena vila de Saint-Rémy-de-Provence. Desde cedo, aprendeu a cozinhar com sua avó e, após anos em Paris, decidiu abrir seu próprio bistrô.
+          <br> 
+          Com um cardápio que inclui clássicos como coq au vin e crème brûlée, o restaurante destaca-se pelo uso de ingredientes frescos e locais. A decoração charmosa e o ambiente acolhedor fazem de La Petit Cuisine um lugar perfeito para encontros familiares e com amigos, onde cada prato conta uma história e celebra a tradição da boa comida.
+        </p>
+      </div>
+
+      <div class="image-container">
+        <img src="./img/coq-au.png" alt="Ratatui de Frango">
+      </div>
+    </section>
+
+
+
+    <section class="experts" id="experts">
+      <div class="text">
+        <h2>Nossos <span class="span-text">C</span>hefes </h2>
+        <p>O La Prtit é uma cosinha renomada de sucesso </p>
+      </div>
+
+      <div class="expert-content">
+
+        <div class="expert-content-container">
+          <div class="image-container">
+            <img src="./img/Chefe Clarice.jpg" alt="Chefe Clarice">
+
+            <p class="text">
+              Chefe Clarice
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="expert-content-container">
+          <div class="image-container">
+            <img src="./img/Chef_Pierre.avif" alt="Chef Chef_Pierre">
+            <p class="text">
+              Chefe Pierre
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="expert-content-container">
+          <div class="image-container">
+            <img src="./img/Chefe_Celine.jpg" alt="Chef Celine">
+            <p class="text">
+              Chef Celine
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="expert-content-container">
+          <div class="image-container">
+            <img src="./img/Chef_Jean.jpg" alt="Chefe Jean">
+            <p class="text">
+              Chef Jean
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="text">
+        <h2>Eles disseram sobre <span class="span-text">Nós</span> </h2>
+        <p>Cada comentário é importante para nos ajuda a aprimorar ainda mais a experiência no La Petit</p>
+      </div>
+
+      <div class="content">
+        <div class="testimonial-container">
+          <div class="testimonial-image">
+            <img src="https://www.tribunapr.com.br/wp-content/uploads/2020/08/16145536/jovem-feliz-freepik-ArthurHidden-1.jpg" alt="">
+          </div>
+
+          <div class="testimonial-text">
+            <p>Minha experiência no La Petit foi simplesmente encantadora! Desde o momento em que entrei, fui recebido com um atendimento caloroso e atencioso. O ambiente é aconchegante, com uma decoração que mistura elegância e charme.
+
+            </p>
+          </div>
+
+          <div class="testimonial-name-container">
+            <h3 class="testimonial-name">
+              Catarrine Dion
+            </h3>
+          </div>
+        </div>
+
+        <div class="testimonial-container">
+          <div class="testimonial-image">
+            <img src="https://img.freepik.com/fotos-premium/retrato-de-uma-mulher-com-excesso-de-peso-durante-uma-viagem-ao-mundo-e-fundo-de-ferias_1078161-2032597.jpg" alt="">
+          </div>
+
+          <div class="testimonial-text">
+            <p>O menu é uma verdadeira viagem pela culinária, com pratos que combinam sabores autênticos e ingredientes frescos. Experimentei o risoto de frutos do mar e fiquei impressionado com a combinação de sabores e a apresentação impecável. Para a sobremesa, a tarte tatin foi a cereja do bolo – doce na medida certa e simplesmente divina!</p>
+          </div>
+
+          <div class="testimonial-name-container">
+            <h3 class="testimonial-name">
+              Samir Renê
+            </h3>
+          </div>
+        </div>
+
+
+        <div class="testimonial-container">
+          <div class="testimonial-image">
+            <img src="https://www.pngall.com/wp-content/uploads/2016/04/Happy-Person-Transparent.png" alt="">
+          </div>
+
+          <div class="testimonial-text">
+            <p>Além disso, a carta de vinhos é bem selecionada e o sommelier fez ótimas sugestões para harmonizar com nossos pratos. Sem dúvida, o La Petit se tornou um dos meus lugares favoritos para jantar. Recomendo a todos que buscam uma experiência gastronômica memorável!</p>
+          </div>
+
+          <div class="testimonial-name-container">
+            <h3 class="testimonial-name">
+              Zinedin Lafae
+            </h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
+    </footer>
+
+  </main>
+</body>
+
+</html>
