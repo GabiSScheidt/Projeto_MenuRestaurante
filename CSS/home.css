@@ -376,10 +376,18 @@ textarea {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 10px; /* Ajustado para mais espaço */
   background-color: #FFF5E1;
-  color: black;
-  margin-top: 40px;
+  color: #333;
+  position: relative; /* Ajustado para permitir mais espaço */
+  width: 100%;
+  margin-top: 20px; /* Adicionada margem superior para espaçamento */
+}
+
+footer a {
+  color: #04AA6D;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
 @media (max-width: 991px) {

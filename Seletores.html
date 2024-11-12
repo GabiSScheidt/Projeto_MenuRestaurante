@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <div class="w3-top">
+        <div class="bar">
+            <a href="#home">La Petit Cuisine Française</a>
+            <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+        </div>
+    </div>
+    <header>
+        <nav id="menu">
+          <ul>
+            <li class="list-item"><a href="index.html">Home</a></li>
+            <li class="list-item"><a href="aperitivos_entradas.html">Aperitivos e Entradas</a></li>
+            <li class="list-item"><a href="pratosPrincipais_ Sobremesas.html">Pratos Principais e Sobremesas</a></li>
+            <li class="list-item"><a href="bebidas.html">Bebidas</a></li>
+            <li class="list-item"><a href="Seletor_comida.html">Seletor de course</a></li>
+            <li class="list-item"><a href="Seletor_bebida.html">Seletor de bebidas</a></li>
+            <li class="list-item"><a href="formulario_Experiencia.html">Como Foi Experiência</a></li>
+          </ul>
+        </nav>
+    </header>
+
+<div class="container">
+    <div class="slider">
+
+        <div class="slides">
+            <!--Radio Buttons-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <!--Fim Radio Buttons-->
+
+            <!--Slides imagens-->
+            <div class="slide first">
+                <img src="./img/slide 1.png" alt="Img 1">
+            </div>
+            <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Jacques_Lameloise%2C_escab%C3%A8che_d%27%C3%A9crevisses_sur_gaspacho_d%27asperge_et_cresson.jpg" alt="Img 2">
+            </div>
+            <div class="slide">
+                <img src="https://www.totalwine.com/site/binaries/t1640281230237/content/gallery/data-axle/0051-french-wine-guide/wine-and-cheese.jpg" alt="Img 3">
+            </div>
+            <!--Fim Slides imagens-->
+            
+            <!--Navegação auto-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+             <!--Fim Navegação auto-->
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+
+    </div>
+</div>
+        <div class="container1">
+            <h1>Faça seu pedido</h1>
+            <div class="content">
+                <!-- teste seletor  -->
+                <div class="foto">
+                    <img src="./img/menu restaurante.png" alt="menu restaurante">
+                </div>           
+                <form>
+                    <h2>Selecione l'apéritif</h2>
+                <form action="/action_page.php">
+                    <input type="checkbox" class="rounded-checkbox" id="l'apéritif1" name="Bruschetta" value="l'apéritif"> <label for="l'apéritif1"> Bruschetta</label><br>
+                    <input type="checkbox" class="rounded-checkbox" id="l'apéritif2" name="Tapenade Provençal" value="l'apéritif"> <label for="l'apéritif2"> Tapenade Provençal</label><br>
+                    <input type="checkbox" class="rounded-checkbox" id="l'apéritif3" name="Vol-au-vent de Cogumelos" value="l'apéritif"> <label for="l'apéritif3"> Vol-au-vent de Cogumelos</label><br>
+                    <input type="checkbox" class="rounded-checkbox" id="l'apéritif4" name="Gougères" value="l'apéritif"> <label for="l'apéritif4"> Gougères</label><br>
+                    <input type="checkbox" class="rounded-checkbox" id="l'apéritif5" name="Mini Quiches" value="l'apéritif"> <label for="l'apéritif5"> Mini Quiches</label><br><br> 
+                    <h2>Selecione sua entrée</h2>
+                <form action="/action_page.php">
+                    <input type="checkbox" class="rounded-checkbox" id="entrée1" name="Quiche Lorraine" value="entrée"> <label for="entrée1"> Quiche Lorraine</label><br>
+                    <input type="checkbox" class="rounded-checkbox" id="entrée2" name="Velouté de legumes" value="entrée"> <label for="entrée2"> Velouté de legumes</label><br>
+                    <input type="checkbox" class="rounded-checkbox" id="entrée3" name="Sopa de cebola gratinada" value="entrée"> <label for="entrée3"> Sopa de cebola gratinada</label><br>
+                    <input type="checkbox" class="rounded-checkbox" id="entrée4" name="Salada composta" value="entrée"> <label for="entrée4"> Salada composta</label><br>
+                    <input type="checkbox" class="rounded-checkbox" id="entrée5" name="Escalope Foie Gras" value="entrée"> <label for="entrée5"> Escalope Foie Gras</label><br>
+                    <input type="checkbox" class="rounded-checkbox" id="entrée6" name="Salmão defumado" value="entrée"> <label for="entrée6"> Salmão defumado</label><br><br>  
+                        <h2>Selecione le plat principal</h2>
+                        <form action="/action_page.php">
+                          <input type="checkbox" class="rounded-checkbox" id="principal1" name="Spaghetti bolognaise" value="principal"> <label for="principal1"> Spaghetti bolognaise</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="principal2" name="Escalope à la Milanaise" value="principal"> <label for="principal2"> Escalope à la Milanaise</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="principal3" name="Ratatouille" value="principal"> <label for="principal2"> Ratatouille</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="principal4" name="Risotto ai funghi" value="principal"> <label for="principal2"> Risotto ai funghi</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="principal5" name="Ravioli vegetariano" value="principal"> <label for="principal2"> Ravioli vegetariano</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="principal6" name="Paillard di Filetto" value="principal"> <label for="principal2"> Paillard di Filetto</label><br><br>
+                        <h2>Selecione sua sobremesa</h2>
+                        <form action="/action_page.php">
+                          <input type="checkbox" class="rounded-checkbox" id="sobremesa1" name="Pavê" value="sobremesa"> <label for="sobremesa1"> Pavê</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="sobremesa2" name="Torta de limão" value="sobremesa"> <label for="sobremesa2"> Torta de limão</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="sobremesa3" name="Brownie" value="sobremesa"> <label for="sobremesa3"> Brownie</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="sobremesa4" name="Mouse de maracujá" value="sobremesa"> <label for="sobremesa4"> Mouse de maracujá</label><br><br>
+                          <h2>Vinhos</h2>
+                        <form action="/action_page.php">
+                          <input type="checkbox" class="rounded-checkbox" id="vin1" name="Cabernet Sauvignon" value="vin"> <label for="vin1"> Cabernet Sauvignon</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="vin2" name="Merlot" value="vin"> <label for="vin2"> Merlot</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="vin3" name="Pinot Noir" value="vin"> <label for="vin3"> Pinot Noir</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="vin3" name="Chardonnay" value="vin"> <label for="vin4"> Chardonnay</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="vin4" name="Sauvignon Blanc" value="vin"> <label for="vin5"> Sauvignon Blanc</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="vin5" name="Malbec" value="vin"> <label for="vin6"> Malbec</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="vin6" name="Syrah" value="vin"> <label for="vin7"> Syrah</label><br><br>
+                          <h2>Cervejas</h2>
+                        <form action="/action_page.php">
+                          <input type="checkbox" class="rounded-checkbox" id="cer1" name="Westvleteren XII" value="cer"> <label for="cer1"> Westvleteren XII</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="cer2" name="Heady Topper" value="cer"> <label for="cer2"> Heady Topper</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="cer3" name="Pliny the Elder" value="cer"> <label for="cer3"> Pliny the Elder</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="cer4" name="Trappistes Rochefort 10" value="cer"> <label for="cer4"> Trappistes Rochefort 10</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="cer5" name="Founders KBS" value="bebida"> <label for="cer5"> Founders KBS</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="cer6" name="Three Floyds Dark Lord" value="cer"> <label for="cer5"> Three Floyds Dark Lord</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="cer7" name="Goose Island Bourbon County Stout" value="cer"> <label for="cer7"> Goose Island Bourbon County Stout</label><br><br>
+                          <h2>Cocktails</h2>
+                        <form action="/action_page.php">
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Margarita" value="ct"> <label for="ct1"> Margarita</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct2" name="Mojito" value="ct"> <label for="ct2"> Mojito</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct3" name="Caipirinha" value="ct"> <label for="ct3"> Caipirinha</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct4" name="Martini" value="ct"> <label for="ct4"> Martini</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct5" name="Old Fashioned" value="ct"> <label for="ct5"> Old Fashioned</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct6" name="Piña Colada" value="ct"> <label for="ct6"> Piña Colada</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct7" name="Cosmopolitan" value="ct"> <label for="ct7"> Cosmopolitan</label><br><br>
+                          <h2>Bebidas não alcoólicas</h2>
+                        <form action="/action_page.php">
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Água Mineral" value="ct"> <label for="ct1"> Água Mineral</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Água com Gás" value="ct"> <label for="ct1"> Água com Gás</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Suco de Laranja" value="ct"> <label for="ct1"> Suco de Laranja</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Suco de Maçã" value="ct"> <label for="ct1"> Suco de Maçã</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Suco de Melancia" value="ct"> <label for="ct1"> Suco de Melancia</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Suco de Maracujá" value="ct"> <label for="ct1"> Suco de Maracujá</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Suco de Abacaxi" value="ct"> <label for="ct1"> Suco de Abacaxi</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Suco de Uva" value="ct"> <label for="ct1"> Suco de Uva</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Chá Gelado" value="ct"> <label for="ct1"> Chá Gelado</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Água de Coco" value="ct"> <label for="ct1"> Água de Coco</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Limonada" value="ct"> <label for="ct1"> Limonada</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Smoothie de Morango" value="ct"> <label for="ct1"> Smoothie de Morango</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Smoothie de Banana" value="ct"> <label for="ct1"> Smoothie de Banana</label><br>
+                          <input type="checkbox" class="rounded-checkbox" id="ct1" name="Smoothie de Manga" value="ct"> <label for="ct1"> Smoothie de Manga</label><br><br>
+                          <input class="w3-button w3-light-grey w3-section" type="submit" value="Enviar" onclick="return confirm('Tem certeza que deseja enviar esse pedido para o(a) chef?')"/>
+
+        </div>
+    </div>   
+
+
+   <style>
+    body{  
+    background-color: #DAC786; /* Cor de fundo suave */
+    font-family: serif, 'Playfair Display'; /* Fonte elegante */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    }
+    .container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Estilização do slideshow */
+    .slider{
+        margin: 0 auto;
+        width: 100vw;
+        height: 80vh;
+        overflow: hidden;
+
+    }
+
+    .slides{
+        width: 400%;
+        height: 400px;
+        display: flex;
+    }
+
+    .slides input{
+        display: none;
+    }
+
+    .slide {
+        width: 25%;
+        position: relative;
+        transition: 2s;
+    }
+
+    .slide img{
+        width: 100vw;
+    }
+
+    .manual-navigation{
+       position: absolute;
+        width: 100%;
+        margin-top: -60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .manual-btn{
+        border: 2px solid #FFF;
+        padding: 5px;
+        margin-top: 100px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+
+
+    .manual-btn:hover{
+        background-color: #FFF;
+    }
+
+    #radio1:checked ~.first{
+        margin-left: 0;
+    }
+    #radio2:checked ~.first{
+        margin-left: -25%;
+    }
+    #radio3:checked ~.first{
+        margin-left: -50%;
+    }
+
+    .navigation-auto div{
+        border: 2px solid #FFF;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    .navigation-auto{
+        position: absolute;
+        width: 100%;
+        margin-top: 440px; 
+        display: flex;
+        justify-content: center;
+    }
+    .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    #radio1:checked ~ .navigation-auto .auto-btn1{
+        background-color: #fff;
+    }
+    #radio2:checked ~ .navigation-auto .auto-btn2{
+        background-color: #fff;
+    }
+    #radio3:checked ~ .navigation-auto .auto-btn3{
+        background-color: #fff;
+    }
+    
+    /* Estilização das bebidas*/
+    .w3-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    letter-spacing: 4px;
+    font-size: 1.2em;
+}
+.bar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Menu navegação */
+.menu-toggle {
+    background-color: #333;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+nav {
+    display: none;
+    text-align: center;
+    background-color: #FFF;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 60px; /* Ajuste para alinhar com a barra */
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #04AA6D;
+}
+    .menu-item {
+        background-color: #FFF5E1;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-item img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        float: right;
+    }
+
+    .menu-item p {
+        font-size: 1.1rem;
+    }
+    
+    /*Estilização da foto lateral do seletor */
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        justify-content: space-between;
+        object-fit: contain;
+    }
+    .foto {
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 50vw;
+        height: 100%;
+        align-items: center;
+}
+    .container1 {
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    .container1 h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+    h2 {    
+        margin-bottom: 10px;
+    }
+    /*Estilização do form */
+    .rounded-checkbox {
+         width:15px;
+         height: 15px;
+         border-radius: 50%;
+         vertical-align: middle;
+         border: 1px solid black;
+         appearance: none;
+         -webkit-appearance: none;
+         outline: none;
+         cursor: pointer;
+     }
+    .rounded-checkbox:checked {
+        appearance: auto;
+        clip-path: circle(50% at 50% 50%);
+        background-color: blue;
+     }
+     /* Footer */
+     footer {
+        text-align: center;
+        padding: 10px; /* Ajustado para mais espaço */
+        background-color: #FFF5E1;
+        color: #333;
+        position: relative; /* Ajustado para permitir mais espaço */
+        width: 100%;
+        margin-top: 20px; /* Adicionada margem superior para espaçamento */
+        }
+
+footer a {
+    color: #04AA6D;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+   </style> 
+   <script>
+    
+    let count = 1;
+    document.getElementById ("radio1").checked = true;
+
+    setInterval(function(){
+        nextImage();
+    }, 5000)
+
+    function nextImage(){
+        count++;
+        if(count >3){
+            count = 1;
+        }
+
+        document.getElementById ("radio" + count).checked = true;
+    }
+
+    function toggleMenu() {
+  var menu = document.getElementById('menu');
+  if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+  } else {
+      menu.style.display = 'block';
+  }
+}
+   </script>
+    <footer>
+        <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
+        <a href="bebidas.html">&larr; Página Anterior</a>
+        <a href="formulario_Experiencia.html">Próxima Página &rarr;</a>
+    </footer>
+</body>
+
+</html>
