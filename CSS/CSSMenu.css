@@ -177,6 +177,7 @@ a:focus,
 button:focus {
     outline: 3px solid #A67C52;
 }
+/* dropdown menu */
 .dropbtn {
   background-color:
   color white;
