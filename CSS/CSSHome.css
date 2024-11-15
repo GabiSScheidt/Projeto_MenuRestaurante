@@ -1,6 +1,11 @@
+html,
 body {
-  background-color:#dac786 ;
-  box-sizing: inherit;
+  background-color: #DAC786; /* Cor de fundo suave */
+  font-family: serif, 'Playfair Display'; /* Fonte elegante */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ----------------- form experiência ----------- */
 }
 
 :root {
@@ -9,14 +14,27 @@ body {
   --main-black-color: #111;
 }
 
-.text h2 {
-  font-weight: 300;
-  font-size: 2.5rem;
+/* Estilização do conteúdo */
+.container {
+  max-width: 1200px;
+  margin: 100px auto 0; /* Adicionada margem superior para visibilidade do título */
+  padding: 20px;
+
+  padding-bottom: 40px; /* ------------------ form experiência ---------- */
+}
+h1, h3 {
+  color: #333;
+  text-transform: uppercase;
   text-align: center;
 }
 
-.text p {
-  font-weight: 400;
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 1.8em;
+  margin-top: 40px;
 }
 
 /* Primeira parte do site */
