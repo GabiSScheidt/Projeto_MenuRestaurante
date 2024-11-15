@@ -10,13 +10,7 @@ body {
 }
 
 /* Estilização do conteúdo */
-.container {
-    max-width: 1200px;
-    margin: 100px auto 0; /* Adicionada margem superior para visibilidade do título */
-    padding: 20px;
 
-    padding-bottom: 40px; /* ------------------ form experiência ---------- */
-}
 h1, h3 {
     color: #333;
     text-transform: uppercase;
