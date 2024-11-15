@@ -36,14 +36,12 @@
 <div class="image">
   <div class="image" id="image">
     <div class="w3-col m6 w3-padding-large">
-     <img src="https://hips.hearstapps.com/hmg-prod/images/delish-french-onion-soup-vertical-1-1538433745.jpg" class="w3-image w3-opacity-min" alt="french onion soup" width="600" height="800">
+        <img src="./img/menu restaurante.png" alt="menu restaurante">
     </div>
         <div class="container1">
             <h1>FAÇA SEU PEDIDO</h1>
             <div class="content">
                 <!-- teste seletor  -->
-                <div class="foto">
-                    <img src="./img/menu restaurante.png" alt="menu restaurante">
                 </div>           
                 <form>
                     <h2>Selecione l'apéritif</h2>
