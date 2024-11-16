@@ -60,11 +60,65 @@ footer a {
     text-decoration: none;
     margin: 0 10px;
 }
+
 /* Acessibilidade */
 a:focus,
 button:focus {
     outline: 3px solid #A67C52;
 }
+
+/*Estilização da foto lateral do seletor */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    justify-content: space-between;
+    object-fit: contain;
+}
+
+.foto {
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 50vw;
+    height: 100%;
+    align-items: center;
+}
+    
+.container1 {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    
+.container1 h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+h2 {    
+    margin-bottom: 10px;
+}
+/*Estilização do form */
+.rounded-checkbox {
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid black;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.rounded-checkbox:checked {
+    appearance: auto;
+    clip-path: circle(50% at 50% 50%);
+    background-color: blue;
+}
+
 /* dropdown menu */
 .dropbtn {
   background-color:
@@ -73,7 +127,6 @@ button:focus {
   font-size: 14x;
   border: none;
   cursor: pointer;
-
 }
 
 .dropdown-content {
