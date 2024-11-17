@@ -1,3 +1,13 @@
+ALTER TABLE Cursos ADD COLUMN evento_id INT;
+
+-- Agora, definindo a chave estrangeira para a relação com a tabela Eventos
+ALTER TABLE Cursos ADD CONSTRAINT fk_evento_id FOREIGN KEY (evento_id) REFERENCES Eventos(evento_id);
+
+UPDATE Cursos SET evento_id = 19 WHERE curso_id = 13; -- Exemplo, vinculando o curso com evento_id = 1
+UPDATE Cursos SET evento_id = 20 WHERE curso_id = 14; -- Exemplo, vinculando o curso com evento_id = 2
+UPDATE Cursos SET evento_id = 21 WHERE curso_id = 15; -- Exemplo, vinculando o curso com evento_id = 3
+
+
 -- Inserir Clientes
 INSERT INTO Clientes (nome, email) VALUES
 ('João Silva', 'joao.silva@example.com'),
@@ -68,3 +78,35 @@ INSERT INTO Respostas (cliente_id, curso_sommelier, cozinha_colaborativa, curso_
 -- Verificar se as respostas foram inseridas corretamente
 SELECT * FROM Respostas;
 
+-- ## Inserção de mais  Clientes:
+-- Inserir clientes
+INSERT INTO Clientes (nome, email) VALUES
+('Carlos Pereira', 'carlos.pereira@example.com'),
+('Fernanda Lima', 'fernanda.lima@example.com');
+
+-- Verificar a inserção
+SELECT * FROM Clientes;
+
+-- Inserir Participações em Eventos (clientes participando de eventos sem cursos)
+INSERT INTO Participacoes_Eventos (cliente_id, evento_id, data_participacao) VALUES
+(27, 19, '2025-01-18 18:00:00'),  -- Carlos Pereira participa do "Festival de Vinhos"
+(28, 20, '2025-01-30 19:00:00');  -- Fernanda Lima participa do "Jantar Temático Francês"
+
+-- Verificar a inserção de participações
+SELECT * FROM Participacoes_Eventos;
+
+-- Inserir clientes
+INSERT INTO Clientes (nome, email) VALUES
+('Lucas Silva', 'lucas.silva@example.com'),
+('Juliana Souza', 'juliana.souza@example.com');
+
+-- Verificar a inserção
+SELECT * FROM Clientes;
+
+-- Inserir Inscrições (clientes se inscrevem no curso sem participar de eventos)
+INSERT INTO Inscricoes (cliente_id, curso_id, data_inscricao) VALUES
+(29, 13, '2024-12-10 10:00:00'),  -- Lucas Silva se inscreve no "Curso de Sommelier de Vinhos"
+(30, 14, '2024-12-12 14:30:00');  -- Juliana Souza se inscreve no "Cozinha Colaborativa"
+
+-- Verificar a inserção de inscrições
+SELECT * FROM Inscricoes;
