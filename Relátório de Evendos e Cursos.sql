@@ -45,3 +45,26 @@ WHERE curso_nome IS NULL;
 SELECT * FROM Relatorio_Eventos_Cursos
 WHERE evento_nome IS NULL;
 
+-- Essa consulta permite obter uma visão completa das participações dos clientes nos eventos.**Talvez deixo como um relatório separado.
+SELECT 
+    c.nome AS cliente_nome,                        -- Nome do cliente
+    e.nome AS evento_nome,                         -- Nome do evento
+    e.data_inicio AS evento_data_inicio,           -- Data de início do evento
+    e.data_fim AS evento_data_fim,                 -- Data de fim do evento
+    CASE 
+        WHEN i.curso_id IS NOT NULL THEN 'Sim'    -- Verifica se o cliente está inscrito no curso
+        ELSE 'Não' 
+    END AS inscrito_no_curso                       -- Resposta se está inscrito no curso
+FROM 
+    Participacoes_Eventos pe
+JOIN 
+    Clientes c ON pe.cliente_id = c.cliente_id    -- Associa a participação do cliente
+JOIN 
+    Eventos e ON pe.evento_id = e.evento_id       -- Associa o evento
+LEFT JOIN 
+    Inscricoes i ON c.cliente_id = i.cliente_id   -- Associa o cliente à inscrição no curso
+        AND i.curso_id IS NOT NULL                -- Garante que o cliente esteja inscrito em um curso
+ORDER BY 
+    e.data_inicio, c.nome;                        -- Ordena pela data do evento e pelo nome do cliente
+
+    e.data_inicio, c.nome;
