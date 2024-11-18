@@ -7,6 +7,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/combined.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Estilos ajustados para o modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%; /* Reduzido para 50% */
+            max-width: 300px; /* Limite de largura */
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,14 +55,14 @@
 
     <header>
         <nav id="menu">
-          <ul>
-            <li class="list-item"><a href="indexproject.html">Home</a></li>
-            <li class="list-item"><a href="aperitivos_entradas.html">Aperitivos e Entradas</a></li>
-            <li class="list-item"><a href="pratosPrincipais_ Sobremesas.html">Pratos Principais e Sobremesas</a></li>
-            <li class="list-item"><a href="bebidas.html">Bebidas</a></li>
-            <li class="list-item"><a href="Seletores.html">Faça seu pedido</a></li>
-            <li class="list-item"><a href="formulario_Experiencia.html">Como Foi Experiência</a></li>
-          </ul>
+            <ul>
+                <li class="list-item"><a href="indexproject.html">Home</a></li>
+                <li class="list-item"><a href="aperitivos_entradas.html">Aperitivos e Entradas</a></li>
+                <li class="list-item"><a href="pratosPrincipais_ Sobremesas.html">Pratos Principais e Sobremesas</a></li>
+                <li class="list-item"><a href="bebidas.html">Bebidas</a></li>
+                <li class="list-item"><a href="Seletores.html">Faça seu pedido</a></li>
+                <li class="list-item"><a href="formulario_Experiencia.html">Como Foi Experiência</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -73,24 +109,42 @@
         <a href="Seletores.html">&larr; Página Anterior</a>
     </footer>
 
+    <!-- Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="thankYouMessage"></p>
+            <button id="okButton">OK</button>
+        </div>
+    </div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('clubForm');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-
-    // Preenche automaticamente os campos de nome e e-mail se os parâmetros estiverem na URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const name = urlParams.get('name');
-    const email = urlParams.get('email');
-
-    if (name) nameInput.value = name;
-    if (email) emailInput.value = email;
+    const modal = document.getElementById('thankYouModal');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+    const okButton = document.getElementById('okButton');
+    const closeButton = document.querySelector('.close');
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        // Aqui você pode adicionar validações adicionais se necessário
-        this.submit();
+        const userName = document.getElementById('name').value;
+        thankYouMessage.textContent = `${userName}, obrigado pelo cadastro. Nos veremos em breve. Até a próxima.`;
+        modal.style.display = 'block';
+    });
+
+    okButton.addEventListener('click', function() {
+        window.location.href = 'P_index.html';
+    });
+
+    closeButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
     });
 });
 </script>
