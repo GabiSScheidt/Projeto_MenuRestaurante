@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube La Petit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/CSSMenu.css">
+    <script type="text/javascript" src="Header.js"></script>
+    <script type="text/javascript" src="form.js"></script>
+</head>
+
+<header>
+    <div class="w3-top" class = "dropdown">
+      <div class="bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+         <button onclick="myFunction()" class="bar w3-button dropbtn">La Petit Cuisine Française</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="P_index.html">Home</a>
+            <a href="P_Apes_Entradas.html">Aperitivos e Entradas</a>
+            <a href="P_PratosPrincipais_ Sobremesas.html">Pratos Principais e Sobremesas</a>
+            <a href="P_bebidas.html">Bebidas</a>
+            <a href="P_Seletor.html">Faça Seu Pedido</a>
+            <a href="formulario_Experiencia.html">Formulario De Experiência</a>
+      </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <h1>Clube La Petit</h1>
+        <p>O Clube Le Petit, aproxima você da cozinha francesa. Nosso objetivo é proporcionar experiências gastronômicas que te levam para a França em cada degustação. Interessante não é mesmo? Está esperando o que, finalize o cadastro abaixo e participe.</p>
+        <form action="/submit_club" method="post" id="clubForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="sommelier_course">Deseja participar do nosso próximo curso de sommelier de vinhos, que terá início em 15/01/2025?</label>
+            <select id="sommelier_course" name="sommelier_course" required>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="collaborative_kitchen">Deseja participar da nossa cozinha colaborativa, onde você cozinhará com nossos chefes, aprendendo a fazer grandes clássicos franceses, que terá início no dia 29/01/2025?</label>
+            <select id="collaborative_kitchen" name="collaborative_kitchen" required>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="harmonization_course">Deseja participar do nosso próximo curso de harmonização, que terá início em 10/02/2025?</label>
+            <select id="harmonization_course" name="harmonization_course" required>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="newsletter">Deseja receber em seu e-mail, receitas, dicas e novidades sobre o nosso La Petit quinzenalmente?</label>
+            <select id="newsletter" name="newsletter" required>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <input type="submit" value="Finalizar Cadastro">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
+        <a href="Seletores.html">&larr; Página Anterior</a>
+    </footer>
+
+</body>
+</html>
