@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa de Satisfação</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/combined.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        body, input, textarea {
+            font-family: 'Roboto Sans', sans-serif;
+        }
         .rating {
             unicode-bidi: bidi-override;
             direction: rtl;
@@ -16,13 +19,16 @@
         .rating > span {
             display: inline-block;
             position: relative;
-            width: 1.5em;
-            font-size: 40px; 
+            width: 2em;
+            font-size: 50px;
             color: #ccc;
             cursor: pointer;
+            transition: color 0.2s ease;
         }
         .rating > span:hover:before,
-        .rating > span:hover ~ span:before {
+        .rating > span:hover ~ span:before,
+        .rating > span.active:before,
+        .rating > span.active ~ span:before {
             content: "\2605";
             position: absolute;
             color: #ffd700;
@@ -104,7 +110,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('surveyForm');
     const nameInput = document.getElementById('name');
-    const ratingDivs = document.querySelectorAll('.rating');
     const ratingTexts = {
         1: 'Ruim',
         2: 'Regular',
@@ -113,17 +118,12 @@ document.addEventListener('DOMContentLoaded', function() {
         5: 'Excelente'
     };
 
-    // Validação do nome
-    function validateName(name) {
-        const nameParts = name.trim().split(/\s+/);
-        return /^[A-Za-zÀ-ÿ\s]+$/.test(name) && nameParts.length >= 2 && nameParts.every(part => part.length >= 3);
-    }
-
-    // Configuração das estrelas
-    ratingDivs.forEach(div => {
+    // Função para configurar as estrelas de avaliação
+    function configureRating(divId, textSpanId, hiddenInputId) {
+        const div = document.getElementById(divId);
         const stars = div.querySelectorAll('span');
-        const textSpan = document.getElementById(`${div.id}-text`);
-        const hiddenInput = document.getElementById(`${div.id}-value`);
+        const textSpan = document.getElementById(textSpanId);
+        const hiddenInput = document.getElementById(hiddenInputId);
 
         stars.forEach(star => {
             star.addEventListener('mouseover', function() {
@@ -141,6 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
             star.addEventListener('click', function() {
                 const value = this.getAttribute('data-value');
                 hiddenInput.value = value;
+                stars.forEach(s => s.classList.remove('active'));
+                this.classList.add('active');
             });
         });
 
@@ -151,7 +153,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 star.style.color = index < value ? '#ffd700' : '#ccc';
             });
         });
-    });
+    }
+
+    // Configurar todos os grupos de estrelas
+    configureRating('rating', 'rating-text', 'rating-value');
+    configureRating('food_quality', 'food-quality-text', 'food-quality-value');
+    configureRating('service_quality', 'service-quality-text', 'service-quality-value');
 
     // Validação do formulário
     form.addEventListener('submit', function(e) {
@@ -160,16 +167,19 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Por favor, insira um nome válido (pelo menos dois nomes, cada um com no mínimo três letras, contendo apenas letras).');
             return;
         }
-        // Exibir pop-up de confirmação
         const userResponse = confirm('Obrigado! Agora que nos já avaliou, deseja conhecer e fazer parte do clube La Petit?');
         if (userResponse) {
-            // Redirecionar para o novo formulário
             window.location.href = 'clubepetit.html';
         } else {
-            // Redirecionar para a página inicial
             window.location.href = 'indexproject.html';
         }
     });
+
+    // Função de validação do nome
+    function validateName(name) {
+        const nameParts = name.trim().split(/\s+/);
+        return /^[A-Za-zÀ-ÿ\s]+$/.test(name) && nameParts.length >= 2 && nameParts.every(part => part.length >= 3);
+    }
 });
 </script>
 </body>
