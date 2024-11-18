@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
         5: 'Excelente'
     };
 
-    // Configuração das estrelas
+    /*Configuração das estrelas*/
     function configureRating(divId, textSpanId, hiddenInputId) {
         const div = document.getElementById(divId);
         const stars = div.querySelectorAll('span');
@@ -241,12 +241,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Configurar todos os grupos de estrelas
+    /*Grupos de estrelas*/
     configureRating('rating', 'rating-text', 'rating-value');
     configureRating('food_quality', 'food-quality-text', 'food-quality-value');
     configureRating('service_quality', 'service-quality-text', 'service-quality-value');
 
-    // Validação do formulário e exibição do modal
+    /*Validação do formulário */
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         modal.style.display = 'block';
