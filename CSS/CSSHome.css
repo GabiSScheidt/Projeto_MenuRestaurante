@@ -7,28 +7,6 @@ body {
   overflow-x: hidden; /* ----------------- form experiência ----------- */
 }
 
-  /* Menu */
-
-  .content-container {
-    width: 250px;
-  }
-  
-  .content-container .image-container img {
-    height: 15rem;
-  }
-  
-  .expert-content-container .image-container {
-    height: 25rem;
-  }
-  
-  .testimonials .content {
-    flex-direction: row;
-  }
-  
-  .testimonial-container {
-  width: 250px;
-  }
-  
   /* Menu com dropdown */
   .dropbtn {
     background-color: transparent ;
@@ -37,7 +15,7 @@ body {
     font-size: 14x;
     border: none;
     cursor: pointer;
-  
+    font-size: larger;
   }
   
   .dropdown-content {
@@ -273,24 +251,7 @@ body {
 
 /* Final dos comentários */
 
-
-/* Rodapé */
-footer {
-  text-align: center;
-  padding: 10px; /* Ajustado para mais espaço */
-  background-color: #FFF5E1;
-  color: #333;
-  position: relative; /* Ajustado para permitir mais espaço */
-  width: 100%;
-  margin-top: 20px; /* Adicionada margem superior para espaçamento */
-}
-
-footer a {
-  color: #04AA6D;
-  text-decoration: none;
-  margin: 0 10px;
-}
-/*estilização do formulários e das estrelas */
+*estilização do formulários e das estrelas */
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;
@@ -415,21 +376,6 @@ textarea {
   font-size: 14px;
 }
 
-input[type="submit"] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -440,4 +386,21 @@ input[type="submit"]:hover {
   font-weight: bold ;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 10px; /* Ajustado para mais espaço */
+  background-color: #FFF5E1;
+  color: #333;
+  position: relative; /* Ajustado para permitir mais espaço */
+  width: 100%;
+  margin-top: 20px; /* Adicionada margem superior para espaçamento */
+}
+
+footer a {
+  color: #04AA6D;
+  text-decoration: none;
+  margin: 0 10px;
 }

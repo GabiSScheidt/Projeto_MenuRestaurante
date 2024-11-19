@@ -1,14 +1,43 @@
 /* Cores e Fonte */
 body {
     background-color: #DAC786; /* Cor de fundo suave */
-    font-family:Verdana, Geneva, Tahoma, sans-serif; /* Fonte elegante */
+    font-family:Georgia, 'Times New Roman', Times, serif;/* Fonte elegante */
     color: #333;
-    font-size: large;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* ----------------- form experiência ----------- */
 }
-
+/* dropdown menu */
+.dropbtn {
+    background-color:
+    color white;
+    padding: 14x;
+    font-size: 14x;
+    border: none;
+    cursor: pointer;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 660px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: 0;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .show {display: block;}
 /* Estilização do conteúdo */
 .container {
     max-width: 1200px;
@@ -26,62 +55,17 @@ h1, h3 {
 h1 {
     font-size: 2.8em;
     margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 h3 {
     font-size: 1.8em;
     margin-top: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-/* Formulário de satisfação */
-form {
-    background-color: white;
-    padding: 20px;
-    padding-right: 35px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
-}
-
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-input[type="submit"] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #3e8e41;
-}
-
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    justify-content: space-between;
-}
-
 /* Estilização das bebidas*/
 .menu-item {
     background-color: #FFF5E1;
@@ -157,6 +141,57 @@ input[type="submit"]:hover {
     border-radius: 10px;
 }
 
+/* Clube la petit */
+form {
+    background-color: white;
+    padding: 20px;
+    padding-right: 35px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+
 /* Rodapé */
 footer {
     text-align: center;
@@ -173,39 +208,3 @@ footer a {
     text-decoration: none;
     margin: 0 10px;
 }
-/* Acessibilidade */
-a:focus,
-button:focus {
-    outline: 3px solid #A67C52;
-}
-/* dropdown menu */
-.dropbtn {
-  background-color:
-  color white;
-  padding: 14x;
-  font-size: 14x;
-  border: none;
-  cursor: pointer;
-
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 660px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  left: 0;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.show {display: block;}
-
