@@ -1,8 +1,7 @@
 body {
   background-color: #DAC786; /* Cor de fundo suave */
-  font-family:Verdana, Geneva, Tahoma, sans-serif; /* Fonte elegante */
+  font-family:Georgia, 'Times New Roman', Times, serif; /* Fonte elegante */
   color: #333;
-  font-size: large;
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* ----------------- form experiência ----------- */
@@ -59,7 +58,7 @@ body {
     display: block;
   }
   
-  .show {display: block;}
+.show {display: block;}
   
 
 :root {
@@ -73,22 +72,6 @@ body {
   max-width: 1200px;
   margin: 100px auto 0; /* Adicionada margem superior para visibilidade do título */
   padding: 20px;
-
-  padding-bottom: 40px; /* ------------------ form experiência ---------- */
-}
-h1, h3 {
-  color: #333;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.8em;
-  margin-bottom: 20px;
-}
-h3 {
-  font-size: 1.8em;
-  margin-top: 40px;
 }
 
 /* Primeira parte do site */
@@ -97,18 +80,22 @@ h3 {
   background: url("./images/food2.jpg");
   background-size: cover;
   position: relative;
-
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.hero h2{
+  font-weight: bold ;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 .branding-container {
   max-width: 900px;
   text-align: center;
+  font-size: larger;
 }
 
 .hero .slogan {
@@ -139,6 +126,11 @@ h3 {
   justify-content: space-around;
   flex-direction: column;
 }
+.about h2 {
+  font-weight: bold ;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 .about .text {
   width: 100%;
@@ -146,6 +138,11 @@ h3 {
 
 .about .text p {
   font-weight: 300;
+  text-align: justify;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: larger;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
   
 .about .image-container {
@@ -162,9 +159,15 @@ h3 {
 /* Fim sobre nós */
 
 /* Nossos chefes */
-
+.experts h2 {
+  font-weight: bold ;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 .experts .text {
   text-align: center;
+  font-size: larger;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .experts {
@@ -211,15 +214,19 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-
+.testimonials h2 {
+  font-weight: bold ;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 .testimonials .text {
   padding-top: 5rem;
 }
 
-.testimonials .text h2,
 .testimonials .text p {
   color: var(--main-text-color);
   text-align: center;
+  font-size: large;
 }
 
 .testimonial-container {
@@ -428,4 +435,9 @@ input[type="submit"]:hover {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   justify-content: space-between;
+}
+.container h1 {
+  font-weight: bold ;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif; 
 }
