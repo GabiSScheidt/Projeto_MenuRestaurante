@@ -251,7 +251,7 @@ body {
 
 /* Final dos comentários */
 
-*estilização do formulários e das estrelas */
+/*estilização do formulários e das estrelas */
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;
