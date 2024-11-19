@@ -2,7 +2,7 @@
 /* Cores e Fonte */
 body {
     background-color: #DAC786; /* Cor de fundo suave */
-    font-family: serif, 'Playfair Display'; /* Fonte elegante */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Fonte elegante */
     color: #333;
     margin: 0;
     padding: 0;
@@ -34,7 +34,6 @@ h1, h3 {
     text-transform: uppercase;
     text-align: center;
 }
-
 h1 {
     font-size: 2.8em;
     margin-bottom: 20px;
@@ -78,18 +77,14 @@ button:focus {
 
 .foto {
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 50vw;
-    height: 100%;
+    object-fit:cover;
     align-items: center;
 }
     
 .container1 {
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
     
 .container1 h1 {
@@ -100,25 +95,6 @@ button:focus {
 h2 {    
     margin-bottom: 10px;
 }
-/*Estilização do form */
-.rounded-checkbox {
-    width:15px;
-    height: 15px;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid black;
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.rounded-checkbox:checked {
-    appearance: auto;
-    clip-path: circle(50% at 50% 50%);
-    background-color: blue;
-}
-
 /* dropdown menu */
 .dropbtn {
   background-color:

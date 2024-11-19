@@ -1,8 +1,9 @@
 /* Cores e Fonte */
 body {
     background-color: #DAC786; /* Cor de fundo suave */
-    font-family: serif, 'Playfair Display'; /* Fonte elegante */
+    font-family:Verdana, Geneva, Tahoma, sans-serif; /* Fonte elegante */
     color: #333;
+    font-size: large;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* ----------------- form experiência ----------- */
@@ -207,3 +208,4 @@ button:focus {
 }
 
 .show {display: block;}
+

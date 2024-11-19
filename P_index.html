@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="/CSS/CSSHome.css">
-  <script type="text/javascript" src="Header.js"></script>
+  <script type="text/javascript" src="./JS/Header.js"></script>
   <title>Restaurant La Petit</title>
 </head>
 
@@ -31,7 +31,7 @@
   <div class="branding-container">
     <h2 class="slogan">La Petit Cuisine Française </h2>
     <p>No La Petit, queremos que cada cliente se sinta em um verdadeiro refúgio francês, um local para desfrutar, relaxar e se apaixonar pela arte de comer bem. Venha nos visitar e descubra a magia dos sabores da França bem aqui, perto de você!</p>
-    <a href="./aperitivos_entradas.html" class="btn">Nosso Menu</a>
+    <a href="P_Apes_Entradas.html" class="btn">Nosso Menu</a>
   </div>
 </section>
 
@@ -96,10 +96,62 @@
       <!-- Testemunhos serão inseridos dinamicamente aqui -->
     </div>
   </section>
+  <div class="container">
+    <h1>Pesquisa de Satisfação</h1>
+    <form action="/submit_survey" method="post" id="surveyForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="order_number">Número do Pedido:</label>
+        <input type="text" id="order_number" name="order_number" required>
+
+        <label for="rating">Como você avalia sua experiência geral?</label>
+        <div class="rating" id="rating">
+            <span data-value="5">☆</span><span data-value="4">☆</span><span data-value="3">☆</span><span data-value="2">☆</span><span data-value="1">☆</span>
+        </div>
+        <span class="rating-text" id="rating-text"></span>
+        <input type="hidden" name="rating" id="rating-value">
+
+        <label for="food_quality">Qualidade da Comida:</label>
+        <div class="rating" id="food_quality">
+            <span data-value="5">☆</span><span data-value="4">☆</span><span data-value="3">☆</span><span data-value="2">☆</span><span data-value="1">☆</span>
+        </div>
+        <span class="rating-text" id="food-quality-text"></span>
+        <input type="hidden" name="food_quality" id="food-quality-value">
+
+        <label for="service_quality">Qualidade do Serviço:</label>
+        <div class="rating" id="service_quality">
+            <span data-value="5">☆</span><span data-value="4">☆</span><span data-value="3">☆</span><span data-value="2">☆</span><span data-value="1">☆</span>
+        </div>
+        <span class="rating-text" id="service-quality-text"></span>
+        <input type="hidden" name="service_quality" id="service-quality-value">
+
+        <label for="comments">Comentários ou Sugestões:</label>
+        <textarea id="comments" name="comments" rows="3" placeholder="Escreva seus comentários aqui..."></textarea>
+
+        <input type="submit" value="Enviar Pesquisa">
+    </form>
+</div>
+
+<!-- Modal -->
+<div id="thankYouModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Agora que já nos avaliou, que tal fazer parte do Clube La Petit?</p>
+        <div class="modal-buttons">
+            <button class="modal-button" id="joinClubButton">Vamos lá</button>
+            <button class="modal-button secondary" id="laterButton">Depois</button>
+        </div>
+    </div>
+</div>
+
 
   <footer>
     <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
-    <a href="aperitivos_entradas.html">Próxima Página &rarr;</a>
+    <a href="P_Apes_Entradas.html">Próxima Página &rarr;</a>
   </footer>
 </main>
 
