@@ -223,7 +223,7 @@
 <div id="pedidoModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Pedido enviado à cozinha com sucesso!</p>
+        <p id="modalMessage"></p>
         <div class="modal-buttons">
             <button class="modal-button" id="okButton">OK</button>
         </div>
@@ -236,6 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('pedidoModal');
     const closeButton = document.querySelector('.close');
     const okButton = document.getElementById('okButton');
+    const modalMessage = document.getElementById('modalMessage');
 
     // Função para lidar com a lógica de seleção de "Nenhum"
     function handleNoneOption(category) {
@@ -264,11 +265,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Validação do formulário e exibição do modal
     form.addEventListener('submit', function(e) {
         e.preventDefault();
+        let isValid = true;
+
+        categories.forEach(category => {
+            const checkboxes = category.querySelectorAll('input[type="checkbox"]');
+            const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+            if (!isChecked) {
+                isValid = false;
+            }
+        });
+
+        if (isValid) {
+            modalMessage.textContent = 'Pedido enviado à cozinha com sucesso!';
+        } else {
+            modalMessage.textContent = 'Verifique seu pedido, você não selecionou tudo.';
+        }
+        
         modal.style.display = 'block';
     });
 
     okButton.addEventListener('click', function() {
         modal.style.display = 'none';
+        if (modalMessage.textContent === 'Pedido enviado à cozinha com sucesso!') {
+            location.reload(); // Recarrega a página para iniciar um novo pedido
+        }
     });
 
     closeButton.addEventListener('click', function() {
