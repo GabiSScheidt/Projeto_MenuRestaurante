@@ -6,9 +6,6 @@
     <title>Seletores</title>
     <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/CSSSeletores.css">
-    <link rel="stylesheet" href="CSS/CSSX.css">
-    <script type="text/javascript" src="./JS/Header.js"></script>
-    <script type="text/javascript" src="./JS/form.js"></script>
     <title>Seletores</title>
 </head>
 
@@ -30,7 +27,14 @@
 <body>
   <div class="container">
     <div class="slider">
+
         <div class="slides">
+            <!--Radio Buttons-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <!--Fim Radio Buttons-->
+
             <!--Slides imagens-->
             <div class="slide first">
                 <img src="./img/slide 1.png" alt="Img 1">
@@ -42,7 +46,22 @@
                 <img src="https://www.totalwine.com/site/binaries/t1640281230237/content/gallery/data-axle/0051-french-wine-guide/wine-and-cheese.jpg" alt="Img 3">
             </div>
             <!--Fim Slides imagens-->
+            
+            <!--Navegação auto-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+             <!--Fim Navegação auto-->
         </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+
     </div>
 </div>
         <div class="container1">
@@ -129,7 +148,7 @@
 
         </div>
     </div>   
-
+<script src="./JS/X.js"></script>
     <footer>
         <p>&copy; 2024 La Petit Cuisine Française. Todos os direitos reservados.</p>
         <a href="P_bebidas.html">&larr; Página Anterior</a>

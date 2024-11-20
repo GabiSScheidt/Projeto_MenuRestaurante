@@ -39,7 +39,50 @@ body {
   }
   
   .show {display: block;}
-  
+
+/* Estilização do slideshow */
+.slider {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 100vw;
+    height: 60vh; /* Ajuste proporcional para manter o formato retangular */
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 100%; /* Ajusta a altura ao tamanho do slider */
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+}
+
+/* Navegação */
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
 /*roundbtn */
 .rounded-checkbox {
     width:15px;
@@ -125,3 +168,4 @@ footer a {
     text-decoration: none;
     margin: 0 10px;
 }
+
