@@ -42,11 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
               const value = this.getAttribute('data-value');
               textSpan.textContent = ratingTexts[value];
               for (let i = 0; i < stars.length; i++) {
-                  if (i < value) {
-                      stars[i].style.color = '#ffd700';
-                  } else {
-                      stars[i].style.color = '#ccc';
-                  }
+                      stars[i].style.color = '#ffd700'; /* ajuste da pag para as estrelinhas vermelhas */
               }
           });
 
@@ -61,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
       div.addEventListener('mouseout', function() {
           const value = hiddenInput.value;
           textSpan.textContent = value ? ratingTexts[value] : '';
-          stars.forEach((star, index) => {
-              star.style.color = index < value ? '#ffd700' : '#ccc';
-          });
+          /* stars.forEach((star, index) => {
+             star.style.color = index < value ? '#ffd700' : '#ccc'; 
+          }); */
       });
   }
 

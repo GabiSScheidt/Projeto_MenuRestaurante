@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (name) nameInput.value = name;
     if (email) emailInput.value = email;
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+   form.addEventListener('submit', function(e) {
+      e.preventDefault();
         // Aqui você pode adicionar validações adicionais se necessário
-        this.submit();
-    });
+        this.reset();
+      }); 
 });
 
 function myFunction() {
