@@ -134,10 +134,18 @@ h2{
 }
 
 .foto {
-    overflow: hidden;
-    width: 50vw;
-    object-fit:cover;
-    align-items: center;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;    /* Centraliza verticalmente */
+    height: 100%; /* Ajuste a altura conforme necessário */
+    text-align: center;
+}
+.foto img {
+    width: 50vw; /* Ajusta a largura ao tamanho do contêiner */
+    height: 100%; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para preencher sem distorção */
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
 }
 .container1 {
     padding: 20px;
