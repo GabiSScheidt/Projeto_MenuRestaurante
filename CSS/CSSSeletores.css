@@ -131,7 +131,6 @@ h2{
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     justify-content: space-between;
-    object-fit: contain;
 }
 
 .foto {
@@ -140,7 +139,6 @@ h2{
     object-fit:cover;
     align-items: center;
 }
-    
 .container1 {
     padding: 20px;
     text-align: left;
@@ -168,4 +166,59 @@ footer a {
     text-decoration: none;
     margin: 0 10px;
 }
-
+       /* Estilos para o modal */
+       .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgba(0,0,0,0.4); 
+        padding-top: 60px;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        max-width: 300px;
+        text-align: center;
+    }
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .modal-buttons {
+        margin-top: 20px;
+    }
+    .modal-button {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+    .modal-button:hover {
+        background-color: #218838;
+    }
+    .modal-button.secondary {
+        background-color: #6c757d;
+    }
+    .modal-button.secondary:hover {
+        background-color: #5a6268;
+    }

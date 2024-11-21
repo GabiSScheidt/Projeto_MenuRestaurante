@@ -6,64 +6,6 @@
     <title>Seletores</title>
     <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/CSSSeletores.css">
-    <style>
-        /* Estilos para o modal */
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 1; 
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-            overflow: auto; 
-            background-color: rgba(0,0,0,0.4); 
-            padding-top: 60px;
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; 
-            padding: 20px;
-            border: 1px solid #888;
-            width: 50%;
-            max-width: 300px;
-            text-align: center;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .modal-buttons {
-            margin-top: 20px;
-        }
-        .modal-button {
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            margin: 5px;
-            transition: background-color 0.3s;
-        }
-        .modal-button:hover {
-            background-color: #218838;
-        }
-        .modal-button.secondary {
-            background-color: #6c757d;
-        }
-        .modal-button.secondary:hover {
-            background-color: #5a6268;
-        }
-    </style>
 </head>
 
 <header>
@@ -229,78 +171,9 @@
         </div>
     </div>
 </div>
-
+<script src="./JS/Seletor.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('pedidoForm');
-    const modal = document.getElementById('pedidoModal');
-    const closeButton = document.querySelector('.close');
-    const okButton = document.getElementById('okButton');
-    const modalMessage = document.getElementById('modalMessage');
 
-    // Função para lidar com a lógica de seleção de "Nenhum"
-    function handleNoneOption(category) {
-        const noneCheckbox = category.querySelector('.none-option');
-        const checkboxes = category.querySelectorAll('input[type="checkbox"]:not(.none-option)');
-
-        noneCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                checkboxes.forEach(checkbox => checkbox.checked = false);
-            }
-        });
-
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                if (this.checked) {
-                    noneCheckbox.checked = false;
-                }
-            });
-        });
-    }
-
-    // Aplicar lógica "Nenhum" a cada categoria
-    const categories = document.querySelectorAll('.category');
-    categories.forEach(category => handleNoneOption(category));
-
-    // Validação do formulário e exibição do modal
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        let isValid = true;
-
-        categories.forEach(category => {
-            const checkboxes = category.querySelectorAll('input[type="checkbox"]');
-            const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-            if (!isChecked) {
-                isValid = false;
-            }
-        });
-
-        if (isValid) {
-            modalMessage.textContent = 'Pedido enviado à cozinha com sucesso!';
-        } else {
-            modalMessage.textContent = 'Verifique seu pedido, você não selecionou tudo.';
-        }
-        
-        modal.style.display = 'block';
-    });
-
-    okButton.addEventListener('click', function() {
-        modal.style.display = 'none';
-        if (modalMessage.textContent === 'Pedido enviado à cozinha com sucesso!') {
-            location.reload(); // Recarrega a página para iniciar um novo pedido
-        }
-    });
-
-    closeButton.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
 </script>
 
 <footer>
