@@ -75,11 +75,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   joinClubButton.addEventListener('click', function() {
-      window.location.href = 'p_Clube.html';
+      window.location.href = 'P_Clube.html';
   });
 
   laterButton.addEventListener('click', function() {
-      window.location.href = 'P_index.html';
+      window.location.href = 'index.html';
   });
 
   closeButton.addEventListener('click', function() {
